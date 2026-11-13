@@ -1,0 +1,108 @@
+[0.000000] (-) TimerEvent: {}
+[0.000095] (-) JobUnselected: {'identifier': 'mecanum_drive_controller'}
+[0.000117] (-) JobUnselected: {'identifier': 'yahboom_rosmaster'}
+[0.000127] (-) JobUnselected: {'identifier': 'yahboom_rosmaster_bringup'}
+[0.000142] (-) JobUnselected: {'identifier': 'yahboom_rosmaster_description'}
+[0.000152] (-) JobUnselected: {'identifier': 'yahboom_rosmaster_docking'}
+[0.000162] (-) JobUnselected: {'identifier': 'yahboom_rosmaster_localization'}
+[0.000170] (-) JobUnselected: {'identifier': 'yahboom_rosmaster_msgs'}
+[0.000176] (-) JobUnselected: {'identifier': 'yahboom_rosmaster_navigation'}
+[0.000211] (-) JobUnselected: {'identifier': 'yahboom_rosmaster_system_tests'}
+[0.000273] (uvc_robot_description) JobQueued: {'identifier': 'uvc_robot_description', 'dependencies': OrderedDict()}
+[0.000283] (yahboom_rosmaster_gazebo) JobQueued: {'identifier': 'yahboom_rosmaster_gazebo', 'dependencies': OrderedDict({'uvc_robot_description': '/home/itadmin/addison_ws/install/uvc_robot_description'})}
+[0.000665] (uvc_robot_description) JobStarted: {'identifier': 'uvc_robot_description'}
+[0.006123] (uvc_robot_description) JobProgress: {'identifier': 'uvc_robot_description', 'progress': 'cmake'}
+[0.006344] (uvc_robot_description) Command: {'cmd': ['/usr/bin/cmake', '/home/itadmin/addison_ws/src/yahboom_rosmaster/uvc_robot_description', '-DCMAKE_INSTALL_PREFIX=/home/itadmin/addison_ws/install/uvc_robot_description'], 'cwd': '/home/itadmin/addison_ws/build/uvc_robot_description', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/itadmin/Downloads', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CODEX_CI': '1', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'itadmin', 'SNAP_COMMON': '/var/snap/code/common', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/snap/code/280/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{},"regionalLocale":"en-us"}', 'FONTCONFIG_PATH': '/etc/fonts', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIO_MODULE_DIR': '/home/itadmin/snap/code/common/.cache/gio-modules', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'wayland', 'DEBUG': 'release', 'SNAP_UID': '1000', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/itadmin/addison_ws/install/mecanum_drive_controller/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/itadmin', 'CHROME_DESKTOP': 'code_code.desktop', 'SNAP_LIBRARY_PATH': '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32', 'SNAP_APP_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'OLDPWD': '/home/itadmin', 'DESKTOP_SESSION': 'ubuntu', 'SNAP_USER_DATA': '/home/itadmin/snap/code/280', 'GTK_PATH': '/snap/code/280/usr/lib/x86_64-linux-gnu/gtk-3.0', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-ee288ec1-1.14-main.sock', 'GTK_IM_MODULE_FILE': '/home/itadmin/snap/code/common/.cache/immodules/immodules.cache', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'SYSTEMD_EXEC_PID': '2943', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'SNAP_REVISION': '280', 'COLORTERM': 'truecolor', 'SNAP_APP_COMMON_ID': 'code.desktop', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'VSCODE_CRASH_REPORTER_PROCESS_TYPE': 'extensionHost', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/itadmin/addison_ws/install', 'CODEX_PERMISSION_PROFILE': ':workspace', 'CODEX_TOOL_CALL_ID': 'exec-f4203981-b61b-4cfa-9e97-27a0ae573627', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'itadmin', 'SNAP_CONTEXT': 'fZ6fXbY1VkxK1E8TW9ISf2GMUspl8oaFWbHaW91nIC-MyJfnn23r', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'SNAP_VERSION': '69047191', 'CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS': '1', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'RUST_LOG': 'warn', 'USERNAME': 'itadmin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'SNAP_INSTANCE_NAME': 'code', 'FC_FONTATIONS': '1', 'PATH': '/home/itadmin/.codex/tmp/arg0-linux/codex-arg0PvYkTw:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/itadmin/.vscode/extensions/openai.chatgpt-26.51111.21308-linux-x64/bin/linux-x86_64', 'SESSION_MANAGER': 'local/itadmin-OptiPlex-5000:@/tmp/.ICE-unix/2733,unix/itadmin-OptiPlex-5000:/tmp/.ICE-unix/2733', 'CODEX_VERSION': '0.169.0-alpha.11.1', 'GTK_EXE_PREFIX': '/snap/code/280/usr', 'CODEX_SESSION_ID': '01a1d4fc-4fdf-7b80-8a42-26ab47ec9546', 'VSCODE_NODE_COMPILE_CACHE_ROOT': '/snap/code/280/usr/share/code/resources/app/node-compile-cache', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/3dbc11a0_7a52_47b4_b994_694a21f13004', 'GNOME_SETUP_DISPLAY': ':1', 'SNAP_DATA': '/var/snap/code/280', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/280/usr/lib/locale', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'GH_PAGER': 'cat', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.SLGXY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.121', 'SNAP_USER_COMMON': '/home/itadmin/snap/code/common', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/itadmin/snap/code/280/.local/share/glib-2.0/schemas', 'SNAP_ARCH': 'amd64', 'AMENT_PREFIX_PATH': '/home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo:/home/itadmin/addison_ws/install/yahboom_rosmaster_description:/home/itadmin/addison_ws/install/yahboom_rosmaster_bringup:/home/itadmin/addison_ws/install/mecanum_drive_controller:/opt/ros/jazzy', 'SNAP_COOKIE': 'fZ6fXbY1VkxK1E8TW9ISf2GMUspl8oaFWbHaW91nIC-MyJfnn23r', 'SHELL': '/bin/bash', 'GDK_PIXBUF_MODULEDIR': '/snap/code/280/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders', 'QT_ACCESSIBILITY': '1', 'ELECTRON_RUN_AS_NODE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'SNAP_NAME': 'code', 'VSCODE_NODE_COMPILE_CACHE_KIND': 'extension-host', 'CODEX_THREAD_ID': '01a1d4fc-4fdf-7b80-8a42-26ab47ec9546', 'GDK_PIXBUF_MODULE_FILE': '/home/itadmin/snap/code/common/.cache/gdk-pixbuf-loaders.cache', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'SNAP_LAUNCHER_ARCH_TRIPLET': 'x86_64-linux-gnu', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/itadmin/addison_ws/build/uvc_robot_description', 'VSCODE_CLI': '1', 'LC_ALL': 'C.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'SNAP_REAL_HOME': '/home/itadmin', 'VSCODE_CODE_CACHE_PATH': '/home/itadmin/.config/Code/CachedData/69047191fc427f2f92828279aae1d90d8eeda7ab', 'XDG_DATA_DIRS': '/home/itadmin/snap/code/280/.local/share:/home/itadmin/snap/code/280:/snap/code/280/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'SNAP_EUID': '1000', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'SNAP': '/snap/code/280', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'ELECTRON_NO_ATTACH_CONSOLE': '1', 'SNAP_APP_NAME': 'code', 'CMAKE_PREFIX_PATH': '/home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo:/home/itadmin/addison_ws/install/yahboom_rosmaster_description:/home/itadmin/addison_ws/install/yahboom_rosmaster_bringup:/home/itadmin/addison_ws/install/mecanum_drive_controller:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'VSCODE_PID': '75143'}), 'shell': False}
+[0.099525] (-) TimerEvent: {}
+[0.148983] (uvc_robot_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.199921] (-) TimerEvent: {}
+[0.284672] (uvc_robot_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.299965] (-) TimerEvent: {}
+[0.304950] (uvc_robot_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.400119] (-) TimerEvent: {}
+[0.457330] (uvc_robot_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.476552] (uvc_robot_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.478200] (uvc_robot_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.479067] (uvc_robot_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.497896] (uvc_robot_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500196] (-) TimerEvent: {}
+[0.600439] (-) TimerEvent: {}
+[0.623418] (uvc_robot_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.630034] (uvc_robot_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.630221] (uvc_robot_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.630804] (uvc_robot_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.636924] (uvc_robot_description) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.700626] (-) TimerEvent: {}
+[0.756521] (uvc_robot_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.800700] (-) TimerEvent: {}
+[0.900951] (-) TimerEvent: {}
+[0.903973] (uvc_robot_description) StderrLine: {'line': b"Error parsing '/home/itadmin/addison_ws/src/yahboom_rosmaster/uvc_robot_description/package.xml':\n"}
+[1.001065] (-) TimerEvent: {}
+[1.101281] (-) TimerEvent: {}
+[1.201437] (-) TimerEvent: {}
+[1.301602] (-) TimerEvent: {}
+[1.401771] (-) TimerEvent: {}
+[1.501948] (-) TimerEvent: {}
+[1.602121] (-) TimerEvent: {}
+[1.702324] (-) TimerEvent: {}
+[1.802456] (-) TimerEvent: {}
+[1.902617] (-) TimerEvent: {}
+[2.002844] (-) TimerEvent: {}
+[2.103143] (-) TimerEvent: {}
+[2.203362] (-) TimerEvent: {}
+[2.256058] (uvc_robot_description) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[2.256273] (uvc_robot_description) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>\n'}
+[2.256322] (uvc_robot_description) StderrLine: {'line': b'    main()\n'}
+[2.256353] (uvc_robot_description) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main\n'}
+[2.256386] (uvc_robot_description) StderrLine: {'line': b'    raise e\n'}
+[2.256453] (uvc_robot_description) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main\n'}
+[2.256510] (uvc_robot_description) StderrLine: {'line': b'    package = parse_package_string(\n'}
+[2.256543] (uvc_robot_description) StderrLine: {'line': b'              ^^^^^^^^^^^^^^^^^^^^^\n'}
+[2.256574] (uvc_robot_description) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 788, in parse_package_string\n'}
+[2.256623] (uvc_robot_description) StderrLine: {'line': b'    pkg.validate(warnings=warnings)\n'}
+[2.256655] (uvc_robot_description) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 330, in validate\n'}
+[2.256687] (uvc_robot_description) StderrLine: {'line': b"    raise InvalidPackage('\\n'.join(errors), self.filename)\n"}
+[2.256716] (uvc_robot_description) StderrLine: {'line': b"catkin_pkg.package.InvalidPackage: Error(s) in package '/home/itadmin/addison_ws/src/yahboom_rosmaster/uvc_robot_description/package.xml':\n"}
+[2.256747] (uvc_robot_description) StderrLine: {'line': b'Invalid email "itadmin@localhost" for person "Workspace maintainer"\n'}
+[2.256782] (uvc_robot_description) StderrLine: {'line': b'Error in sys.excepthook:\n'}
+[2.256812] (uvc_robot_description) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[2.256843] (uvc_robot_description) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook\n'}
+[2.256897] (uvc_robot_description) StderrLine: {'line': b'    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)\n'}
+[2.256928] (uvc_robot_description) StderrLine: {'line': b'           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'}
+[2.256958] (uvc_robot_description) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook\n'}
+[2.256988] (uvc_robot_description) StderrLine: {'line': b'    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"\n'}
+[2.257019] (uvc_robot_description) StderrLine: {'line': b'    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'}
+[2.257047] (uvc_robot_description) StderrLine: {'line': b"OSError: [Errno 30] Read-only file system: '/var/crash/_opt_ros_jazzy_share_ament_cmake_core_cmake_core_package_xml_2_cmake.py.1000.crash'\n"}
+[2.257076] (uvc_robot_description) StderrLine: {'line': b'\n'}
+[2.257107] (uvc_robot_description) StderrLine: {'line': b'Original exception was:\n'}
+[2.257149] (uvc_robot_description) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[2.257188] (uvc_robot_description) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>\n'}
+[2.257221] (uvc_robot_description) StderrLine: {'line': b'    main()\n'}
+[2.257251] (uvc_robot_description) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main\n'}
+[2.257285] (uvc_robot_description) StderrLine: {'line': b'    raise e\n'}
+[2.257316] (uvc_robot_description) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main\n'}
+[2.257359] (uvc_robot_description) StderrLine: {'line': b'    package = parse_package_string(\n'}
+[2.257398] (uvc_robot_description) StderrLine: {'line': b'              ^^^^^^^^^^^^^^^^^^^^^\n'}
+[2.257435] (uvc_robot_description) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 788, in parse_package_string\n'}
+[2.257470] (uvc_robot_description) StderrLine: {'line': b'    pkg.validate(warnings=warnings)\n'}
+[2.257503] (uvc_robot_description) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 330, in validate\n'}
+[2.257534] (uvc_robot_description) StderrLine: {'line': b"    raise InvalidPackage('\\n'.join(errors), self.filename)\n"}
+[2.257573] (uvc_robot_description) StderrLine: {'line': b"catkin_pkg.package.InvalidPackage: Error(s) in package '/home/itadmin/addison_ws/src/yahboom_rosmaster/uvc_robot_description/package.xml':\n"}
+[2.257609] (uvc_robot_description) StderrLine: {'line': b'Invalid email "itadmin@localhost" for person "Workspace maintainer"\n'}
+[2.283947] (uvc_robot_description) StderrLine: {'line': b'CMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):\n'}
+[2.284074] (uvc_robot_description) StderrLine: {'line': b'  execute_process(/usr/bin/python3\n'}
+[2.284106] (uvc_robot_description) StderrLine: {'line': b'  /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py\n'}
+[2.284142] (uvc_robot_description) StderrLine: {'line': b'  /home/itadmin/addison_ws/src/yahboom_rosmaster/uvc_robot_description/package.xml\n'}
+[2.284173] (uvc_robot_description) StderrLine: {'line': b'  /home/itadmin/addison_ws/build/uvc_robot_description/ament_cmake_core/package.cmake)\n'}
+[2.284206] (uvc_robot_description) StderrLine: {'line': b'  returned error code 1\n'}
+[2.284238] (uvc_robot_description) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.284269] (uvc_robot_description) StderrLine: {'line': b'  /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[2.284303] (uvc_robot_description) StderrLine: {'line': b'  /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)\n'}
+[2.284348] (uvc_robot_description) StderrLine: {'line': b'  CMakeLists.txt:10 (ament_package)\n'}
+[2.284378] (uvc_robot_description) StderrLine: {'line': b'\n'}
+[2.284417] (uvc_robot_description) StderrLine: {'line': b'\n'}
+[2.284447] (uvc_robot_description) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.287533] (uvc_robot_description) CommandEnded: {'returncode': 1}
+[2.287976] (uvc_robot_description) JobEnded: {'identifier': 'uvc_robot_description', 'rc': 1}
+[2.298392] (yahboom_rosmaster_gazebo) JobSkipped: {'identifier': 'yahboom_rosmaster_gazebo'}
+[2.298421] (-) EventReactorShutdown: {}

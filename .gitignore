@@ -1,7 +1,4 @@
-# ROS/colcon build products: regenerate these after cloning.
-/build/
-/install/
-/log/
+# This repository includes the current build/install/log snapshot by request.
 
 # Original upstream Git history retained locally, never uploaded.
 /.upstream-git/
@@ -36,3 +33,17 @@ __pycache__/
 *.mcap
 *-wal
 *-shm
+
+# Keep every generated snapshot file, including logs and Python caches.
+!/build/**
+!/install/**
+!/log/**
+
+# Credentials stay excluded even within a generated directory.
+**/.git/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.xauth

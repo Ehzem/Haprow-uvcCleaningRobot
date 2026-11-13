@@ -1,0 +1,2 @@
+Invoking command in '/home/itadmin/addison_ws/build/uvc_robot_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/itadmin/addison_ws/src/yahboom_rosmaster/uvc_robot_description -DCMAKE_INSTALL_PREFIX=/home/itadmin/addison_ws/install/uvc_robot_description
+Invoked command in '/home/itadmin/addison_ws/build/uvc_robot_description' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/itadmin/addison_ws/src/yahboom_rosmaster/uvc_robot_description -DCMAKE_INSTALL_PREFIX=/home/itadmin/addison_ws/install/uvc_robot_description

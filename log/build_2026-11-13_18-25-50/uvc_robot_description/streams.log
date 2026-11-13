@@ -1,0 +1,67 @@
+[0.007s] Invoking command in '/home/itadmin/addison_ws/build/uvc_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/itadmin/addison_ws/src/yahboom_rosmaster/uvc_robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/itadmin/addison_ws/install/uvc_robot_description
+[0.019s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.199s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.269s] -- Configuring done (0.3s)
+[0.270s] -- Generating done (0.0s)
+[0.271s] -- Build files have been written to: /home/itadmin/addison_ws/build/uvc_robot_description
+[0.273s] Invoked command in '/home/itadmin/addison_ws/build/uvc_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/itadmin/addison_ws/src/yahboom_rosmaster/uvc_robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/itadmin/addison_ws/install/uvc_robot_description
+[0.275s] Invoking command in '/home/itadmin/addison_ws/build/uvc_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/itadmin/addison_ws/build/uvc_robot_description -- -j20 -l20
+[0.309s] Invoked command in '/home/itadmin/addison_ws/build/uvc_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/itadmin/addison_ws/build/uvc_robot_description -- -j20 -l20
+[0.321s] Invoking command in '/home/itadmin/addison_ws/build/uvc_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/itadmin/addison_ws/build/uvc_robot_description
+[0.328s] -- Install configuration: ""
+[0.328s] -- Execute custom install script
+[0.328s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/launch/robot_state_publisher.launch.py
+[0.335s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_00.stl
+[0.347s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_01.stl
+[0.355s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_02.stl
+[0.360s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_03.stl
+[0.368s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_04.stl
+[0.374s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_05.stl
+[0.387s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_06.stl
+[0.392s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_07.stl
+[0.399s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_08.stl
+[0.406s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_09.stl
+[0.413s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_10.stl
+[0.421s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_11.stl
+[0.429s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_12.stl
+[0.435s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_13.stl
+[0.441s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_14.stl
+[0.450s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_15.stl
+[0.460s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_16.stl
+[0.472s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_17.stl
+[0.488s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_18.stl
+[0.502s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_19.stl
+[0.514s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_20.stl
+[0.527s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_21.stl
+[0.538s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_22.stl
+[0.544s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_23.stl
+[0.554s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_24.stl
+[0.565s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_25.stl
+[0.574s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_26.stl
+[0.584s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_27.stl
+[0.592s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_28.stl
+[0.600s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_29.stl
+[0.607s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_30.stl
+[0.616s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_31.stl
+[0.624s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_32.stl
+[0.632s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_33.stl
+[0.639s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/meshes/uvc_robot/part_34.stl
+[0.652s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/urdf/robots/uvc_robot.urdf
+[0.662s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/rviz/uvc_robot.rviz
+[0.672s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/README.md
+[0.680s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/ament_index/resource_index/package_run_dependencies/uvc_robot_description
+[0.689s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/ament_index/resource_index/parent_prefix_path/uvc_robot_description
+[0.698s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/environment/ament_prefix_path.sh
+[0.710s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/environment/ament_prefix_path.dsv
+[0.721s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/environment/path.sh
+[0.728s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/environment/path.dsv
+[0.738s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/local_setup.bash
+[0.754s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/local_setup.sh
+[0.766s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/local_setup.zsh
+[0.778s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/local_setup.dsv
+[0.789s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/package.dsv
+[0.796s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/ament_index/resource_index/packages/uvc_robot_description
+[0.806s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/cmake/uvc_robot_descriptionConfig.cmake
+[0.814s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/cmake/uvc_robot_descriptionConfig-version.cmake
+[0.822s] -- Symlinking: /home/itadmin/addison_ws/install/uvc_robot_description/share/uvc_robot_description/package.xml
+[0.831s] Invoked command in '/home/itadmin/addison_ws/build/uvc_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/itadmin/addison_ws/build/uvc_robot_description

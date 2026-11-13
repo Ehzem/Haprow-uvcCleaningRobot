@@ -1,0 +1,671 @@
+[0.009s] Invoking command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/itadmin/addison_ws/src/yahboom_rosmaster/yahboom_rosmaster_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo
+[0.129s] -- The C compiler identification is GNU 13.3.0
+[0.196s] -- The CXX compiler identification is GNU 13.3.0
+[0.212s] -- Detecting C compiler ABI info
+[0.374s] -- Detecting C compiler ABI info - done
+[0.380s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.380s] -- Detecting C compile features
+[0.380s] -- Detecting C compile features - done
+[0.387s] -- Detecting CXX compiler ABI info
+[0.521s] -- Detecting CXX compiler ABI info - done
+[0.531s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.532s] -- Detecting CXX compile features
+[0.532s] -- Detecting CXX compile features - done
+[0.535s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.668s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.723s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.752s] -- Found controller_manager: 4.48.1 (/opt/ros/jazzy/share/controller_manager/cmake)
+[0.787s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.796s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.807s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.820s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.870s] -- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.873s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.965s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.985s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.004s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.072s] [0mCMake Deprecation Warning at /opt/ros/jazzy/share/tl_expected/cmake/tl_expectedConfig.cmake:37 (message):
+[1.072s]   Package 'tl_expected' is deprecated (This package will be removed in ROS 2
+[1.072s]   Lyrical Luth.
+[1.072s] 
+[1.072s]         Use tl/expected.hpp from libexpected-dev,
+[1.072s]         or rcpputils/tl_expected/expected.hpp if the system header is not available)
+[1.072s] Call Stack (most recent call first):
+[1.072s]   /opt/ros/jazzy/share/parameter_traits/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.072s]   /opt/ros/jazzy/share/parameter_traits/cmake/parameter_traitsConfig.cmake:41 (include)
+[1.072s]   /opt/ros/jazzy/share/controller_manager/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.072s]   /opt/ros/jazzy/share/controller_manager/cmake/controller_managerConfig.cmake:41 (include)
+[1.072s]   CMakeLists.txt:10 (find_package)
+[1.072s] 
+[1.072s] [0m
+[1.222s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+[1.432s] -- Found gz_ros2_control: 1.2.20 (/opt/ros/jazzy/share/gz_ros2_control/cmake)
+[1.436s] -- Found ros_gz: 1.0.24 (/opt/ros/jazzy/share/ros_gz/cmake)
+[1.437s] -- Found ros_gz_bridge: 1.0.24 (/opt/ros/jazzy/share/ros_gz_bridge/cmake)
+[1.467s] -- Looking for gz-msgs10 -- found version 10.4.0
+[1.471s] -- Searching for dependencies of gz-msgs10
+[1.487s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.21.12") 
+[1.489s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.489s] -- Searching for dependencies of gz-utils2
+[1.490s] -- Looking for gz-math7 -- found version 7.7.0
+[1.490s] -- Searching for dependencies of gz-math7
+[1.490s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.495s] -- Checking for module 'tinyxml2'
+[1.509s] --   Found tinyxml2, version 10.0.0
+[1.602s] -- Looking for gz-transport13 -- found version 13.6.0
+[1.602s] -- Searching for dependencies of gz-transport13
+[1.636s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[1.642s] -- Checking for module 'libzmq >= 4'
+[1.661s] --   Found libzmq, version 4.3.5
+[1.760s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[1.770s] -- Checking for module 'uuid'
+[1.805s] --   Found uuid, version 2.39.3
+[1.894s] -- Found UUID: TRUE  
+[1.895s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.895s] -- Searching for dependencies of gz-utils2
+[1.895s] -- Searching for <gz-utils2> component [cli]
+[1.900s] -- Looking for gz-utils2-cli -- found version 2.2.1
+[1.901s] -- Searching for dependencies of gz-utils2-cli
+[1.903s] -- Looking for gz-msgs10 -- found version 10.4.0
+[2.022s] -- Found ros_gz_image: 1.0.24 (/opt/ros/jazzy/share/ros_gz_image/cmake)
+[2.024s] -- Found ros_gz_sim: 1.0.24 (/opt/ros/jazzy/share/ros_gz_sim/cmake)
+[2.043s] -- Found ros2_control: 4.48.1 (/opt/ros/jazzy/share/ros2_control/cmake)
+[2.044s] -- Found ros2_controllers: 4.42.1 (/opt/ros/jazzy/share/ros2_controllers/cmake)
+[2.046s] -- Found xacro: 2.1.1 (/opt/ros/jazzy/share/xacro/cmake)
+[2.048s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.137s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.137s] -- Configured 'flake8' exclude dirs and/or files: 
+[2.141s] -- Added test 'lint_cmake' to check CMake code style
+[2.144s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.161s] -- Added test 'xmllint' to check XML markup files
+[2.162s] -- Configuring done (2.1s)
+[2.167s] -- Generating done (0.0s)
+[2.169s] -- Build files have been written to: /home/itadmin/addison_ws/build/yahboom_rosmaster_gazebo
+[2.178s] Invoked command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/itadmin/addison_ws/src/yahboom_rosmaster/yahboom_rosmaster_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo
+[2.179s] Invoking command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/itadmin/addison_ws/build/yahboom_rosmaster_gazebo -- -j20 -l20
+[2.218s] Invoked command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/itadmin/addison_ws/build/yahboom_rosmaster_gazebo -- -j20 -l20
+[2.233s] Invoking command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/itadmin/addison_ws/build/yahboom_rosmaster_gazebo
+[2.249s] -- Install configuration: ""
+[2.249s] -- Execute custom install script
+[2.250s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/config/ros_gz_bridge.yaml
+[2.263s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/launch/yahboom_rosmaster.gazebo.launch.py
+[2.295s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/Apriltag36_11_00000/materials/textures/tag36_11_00000.png
+[2.301s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/Apriltag36_11_00000/meshes/tag36_11_00000.dae
+[2.308s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/Apriltag36_11_00000/model.config
+[2.323s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/Apriltag36_11_00000/model.sdf
+[2.337s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_AirconditionerA_01/materials/textures/aws_AirconditionerA_01.png
+[2.352s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_AirconditionerA_01/meshes/aws_AirconditionerA_01_collision.DAE
+[2.360s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_AirconditionerA_01/meshes/aws_AirconditionerA_01_visual.DAE
+[2.366s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_AirconditionerA_01/model.config
+[2.373s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_AirconditionerA_01/model.sdf
+[2.379s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_AirconditionerB_01/materials/textures/aws_AirconditionerB_01.png
+[2.385s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_AirconditionerB_01/meshes/aws_AirconditionerB_01_collision.DAE
+[2.392s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_AirconditionerB_01/meshes/aws_AirconditionerB_01_visual.DAE
+[2.401s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_AirconditionerB_01/model.config
+[2.410s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_AirconditionerB_01/model.sdf
+[2.418s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_BalconyTable_01/materials/textures/aws_BalconyTable_01.png
+[2.429s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_BalconyTable_01/meshes/aws_BalconyTable_01_collision.DAE
+[2.440s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_BalconyTable_01/meshes/aws_BalconyTable_01_visual.DAE
+[2.454s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_BalconyTable_01/model.config
+[2.467s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_BalconyTable_01/model.sdf
+[2.489s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Ball_01/materials/textures/aws_Ball_01.png
+[2.507s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Ball_01/meshes/aws_Ball_01_collision.DAE
+[2.522s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Ball_01/meshes/aws_Ball_01_visual.DAE
+[2.537s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Ball_01/model.config
+[2.552s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Ball_01/model.sdf
+[2.564s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Bed_01/materials/textures/aws_BedA_01.png
+[2.577s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Bed_01/materials/textures/aws_BedB_01.png
+[2.595s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Bed_01/materials/textures/aws_BedC_01.png
+[2.611s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Bed_01/materials/textures/aws_Bed_01.png
+[2.622s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Bed_01/meshes/aws_Bed_01_collision.DAE
+[2.635s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Bed_01/meshes/aws_Bed_01_visual.DAE
+[2.653s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Bed_01/model.config
+[2.672s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Bed_01/model.sdf
+[2.691s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Board_01/materials/textures/aws_Board_01.png
+[2.707s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Board_01/meshes/aws_Board_01_collision.DAE
+[2.719s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Board_01/meshes/aws_Board_01_visual.DAE
+[2.738s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Board_01/model.config
+[2.753s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Board_01/model.sdf
+[2.771s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Carpet_01/materials/textures/aws_Carpet_01.png
+[2.787s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Carpet_01/meshes/aws_Carpet_01_collision.DAE
+[2.807s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Carpet_01/meshes/aws_Carpet_01_visual.DAE
+[2.821s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Carpet_01/model.config
+[2.833s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Carpet_01/model.sdf
+[2.856s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ChairA_01/materials/textures/aws_ChairA_01.png
+[2.868s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ChairA_01/meshes/aws_ChairA_01_collision.DAE
+[2.886s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ChairA_01/meshes/aws_ChairA_01_visual.DAE
+[2.899s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ChairA_01/model.config
+[2.909s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ChairA_01/model.sdf
+[2.923s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ChairD_01/materials/textures/aws_ChairD_01.png
+[2.934s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ChairD_01/meshes/aws_ChairD_01_collision.DAE
+[2.947s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ChairD_01/meshes/aws_ChairD_01_visual.DAE
+[2.966s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ChairD_01/model.config
+[2.984s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ChairD_01/model.sdf
+[2.994s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Chandelier_01/materials/textures/aws_Chandelier_01.png
+[3.008s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Chandelier_01/meshes/aws_Chandelier_01.DAE
+[3.029s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Chandelier_01/meshes/aws_Chandelier_01_collision.DAE
+[3.042s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Chandelier_01/meshes/aws_Chandelier_01_visual.DAE
+[3.057s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Chandelier_01/model.config
+[3.067s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Chandelier_01/model.sdf
+[3.082s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_CoffeeTable_01/materials/textures/aws_CoffeeTable_01.png
+[3.095s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_CoffeeTable_01/meshes/aws_CoffeeTable_01_collision.DAE
+[3.116s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_CoffeeTable_01/meshes/aws_CoffeeTable_01_visual.DAE
+[3.133s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_CoffeeTable_01/model.config
+[3.145s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_CoffeeTable_01/model.sdf
+[3.161s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_CookingBench_01/materials/textures/aws_CookingBench_01.png
+[3.176s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_CookingBench_01/meshes/aws_CookingBench_01.DAE
+[3.195s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_CookingBench_01/meshes/aws_CookingBench_01_collision.DAE
+[3.214s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_CookingBench_01/meshes/aws_CookingBench_01_visual.DAE
+[3.229s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_CookingBench_01/model.config
+[3.241s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_CookingBench_01/model.sdf
+[3.250s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Curtain_01/materials/textures/aws_Curtain_01.png
+[3.259s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Curtain_01/meshes/aws_Curtain_01_collision.DAE
+[3.275s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Curtain_01/meshes/aws_Curtain_01_visual.DAE
+[3.293s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Curtain_01/model.config
+[3.304s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Curtain_01/model.sdf
+[3.319s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_01/materials/textures/DeskPortraitA_01.jpg
+[3.341s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_01/materials/textures/aws_DeskPortraitA_01.png
+[3.360s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_01/materials/textures/aws_DeskPortraitA_02.png
+[3.380s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_01/meshes/aws_DeskPortraitA_01_collision.DAE
+[3.397s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_01/meshes/aws_DeskPortraitA_01_visual.DAE
+[3.419s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_01/model.config
+[3.431s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_01/model.sdf
+[3.441s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_02/materials/textures/DeskPortraitA_02.jpg
+[3.460s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_02/materials/textures/aws_DeskPortraitA_01.png
+[3.480s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_02/materials/textures/aws_DeskPortraitA_02.png
+[3.501s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_02/meshes/aws_DeskPortraitA_01_collision.DAE
+[3.520s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_02/meshes/aws_DeskPortraitA_01_visual.DAE
+[3.531s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_02/model.config
+[3.541s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitA_02/model.sdf
+[3.554s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_01/materials/textures/DeskPortraitB_01.jpg
+[3.572s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_01/materials/textures/aws_DeskPortraitB_01.png
+[3.582s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_01/materials/textures/aws_DeskPortraitB_02.png
+[3.592s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_01/meshes/aws_DeskPortraitB_01_collision.DAE
+[3.606s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_01/meshes/aws_DeskPortraitB_01_visual.DAE
+[3.624s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_01/model.config
+[3.638s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_01/model.sdf
+[3.649s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_02/materials/textures/DeskPortraitB_02.jpg
+[3.658s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_02/materials/textures/aws_DeskPortraitB_01.png
+[3.672s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_02/materials/textures/aws_DeskPortraitB_02.png
+[3.690s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_02/meshes/aws_DeskPortraitB_01_collision.DAE
+[3.705s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_02/meshes/aws_DeskPortraitB_01_visual.DAE
+[3.719s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_02/model.config
+[3.737s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitB_02/model.sdf
+[3.754s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_01/materials/textures/DeskPortraitC_01.jpg
+[3.770s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_01/materials/textures/aws_DeskPortraitC_01.png
+[3.783s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_01/materials/textures/aws_DeskPortraitC_02.png
+[3.793s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_01/meshes/aws_DeskPortraitC_01_collision.DAE
+[3.807s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_01/meshes/aws_DeskPortraitC_01_visual.DAE
+[3.821s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_01/model.config
+[3.840s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_01/model.sdf
+[3.861s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_02/materials/textures/DeskPortraitC_02.jpg
+[3.881s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_02/materials/textures/aws_DeskPortraitC_01.png
+[3.901s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_02/materials/textures/aws_DeskPortraitC_02.png
+[3.921s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_02/meshes/aws_DeskPortraitC_01_collision.DAE
+[3.941s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_02/meshes/aws_DeskPortraitC_01_visual.DAE
+[3.960s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_02/model.config
+[3.981s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitC_02/model.sdf
+[4.001s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_01/materials/textures/DeskPortraitD_01.jpg
+[4.019s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_01/materials/textures/aws_DeskPortraitD_01.png
+[4.040s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_01/materials/textures/aws_DeskPortraitD_02.png
+[4.061s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_01/meshes/aws_DeskPortraitD_01_collision.DAE
+[4.082s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_01/meshes/aws_DeskPortraitD_01_visual.DAE
+[4.102s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_01/model.config
+[4.123s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_01/model.sdf
+[4.139s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_02/materials/textures/DeskPortraitD_02.jpg
+[4.156s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_02/materials/textures/aws_DeskPortraitD_01.png
+[4.174s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_02/materials/textures/aws_DeskPortraitD_02.png
+[4.182s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_02/meshes/aws_DeskPortraitD_01_collision.DAE
+[4.193s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_02/meshes/aws_DeskPortraitD_01_visual.DAE
+[4.210s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_02/model.config
+[4.225s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_02/model.sdf
+[4.242s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_03/materials/textures/DeskPortraitD_03.jpg
+[4.251s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_03/materials/textures/aws_DeskPortraitD_01.png
+[4.265s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_03/materials/textures/aws_DeskPortraitD_02.png
+[4.282s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_03/meshes/aws_DeskPortraitD_01_collision.DAE
+[4.299s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_03/meshes/aws_DeskPortraitD_01_visual.DAE
+[4.317s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_03/model.config
+[4.332s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_03/model.sdf
+[4.347s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_04/materials/textures/DeskPortraitD_04.jpg
+[4.363s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_04/materials/textures/aws_DeskPortraitD_01.png
+[4.381s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_04/materials/textures/aws_DeskPortraitD_02.png
+[4.393s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_04/meshes/aws_DeskPortraitD_01_collision.DAE
+[4.406s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_04/meshes/aws_DeskPortraitD_01_visual.DAE
+[4.415s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_04/model.config
+[4.433s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_DeskPortraitD_04/model.sdf
+[4.443s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Door_01/materials/textures/aws_Door_01.png
+[4.456s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Door_01/meshes/aws_Door_01_collision.DAE
+[4.473s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Door_01/meshes/aws_Door_01_visual.DAE
+[4.485s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Door_01/model.config
+[4.502s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Door_01/model.sdf
+[4.523s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Dumbbell_01/materials/textures/aws_Dumbbell_01.png
+[4.545s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Dumbbell_01/meshes/aws_Dumbbell_01_collision.DAE
+[4.563s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Dumbbell_01/meshes/aws_Dumbbell_01_visual.DAE
+[4.574s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Dumbbell_01/model.config
+[4.582s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Dumbbell_01/model.sdf
+[4.592s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FitnessEquipment_01/materials/textures/aws_FitnessEquipment_01.png
+[4.597s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FitnessEquipment_01/meshes/aws_FitnessEquipment_01_collision.DAE
+[4.602s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FitnessEquipment_01/meshes/aws_FitnessEquipment_01_visual.DAE
+[4.610s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FitnessEquipment_01/model.config
+[4.614s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FitnessEquipment_01/model.sdf
+[4.621s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FloorB_01/materials/textures/aws_FloorB_01.png
+[4.629s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FloorB_01/meshes/aws_FloorB_01_collision.DAE
+[4.636s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FloorB_01/meshes/aws_FloorB_01_visual.DAE
+[4.644s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FloorB_01/model.config
+[4.654s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FloorB_01/model.sdf
+[4.663s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FoldingDoor_01/materials/textures/aws_FoldingDoor_01.png
+[4.675s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FoldingDoor_01/meshes/aws_FoldingDoor_01_collision.DAE
+[4.686s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FoldingDoor_01/meshes/aws_FoldingDoor_01_visual.DAE
+[4.704s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FoldingDoor_01/model.config
+[4.722s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FoldingDoor_01/model.sdf
+[4.739s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FoldingDoor_02/materials/textures/aws_FoldingDoor_02.png
+[4.755s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FoldingDoor_02/meshes/aws_FoldingDoor_02_collision.DAE
+[4.771s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FoldingDoor_02/meshes/aws_FoldingDoor_02_visual.DAE
+[4.786s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FoldingDoor_02/model.config
+[4.803s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_FoldingDoor_02/model.sdf
+[4.819s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Handle_01/materials/textures/aws_Handle_01.png
+[4.832s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Handle_01/meshes/aws_Handle_01_collision.DAE
+[4.848s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Handle_01/meshes/aws_Handle_01_visual.DAE
+[4.871s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Handle_01/model.config
+[4.885s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Handle_01/model.sdf
+[4.907s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_HouseWallB_01/materials/textures/aws_HouseWallB_01.png
+[4.926s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_HouseWallB_01/meshes/aws_HouseWallB_01_collision.DAE
+[4.941s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_HouseWallB_01/meshes/aws_HouseWallB_01_visual.DAE
+[4.952s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_HouseWallB_01/model.config
+[4.968s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_HouseWallB_01/model.sdf
+[4.985s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenCabinet_01/materials/textures/aws_KitchenCabinet_01.png
+[5.003s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenCabinet_01/meshes/aws_KitchenCabinet_01_collision.DAE
+[5.017s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenCabinet_01/meshes/aws_KitchenCabinet_01_visual.DAE
+[5.034s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenCabinet_01/model.config
+[5.052s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenCabinet_01/model.sdf
+[5.072s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenTable_01/materials/textures/aws_KitchenTable_01.png
+[5.082s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenTable_01/meshes/aws_KitchenTable_01_collision.DAE
+[5.101s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenTable_01/meshes/aws_KitchenTable_01_visual.DAE
+[5.118s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenTable_01/model.config
+[5.129s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenTable_01/model.sdf
+[5.136s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenUtensils_01/materials/textures/aws_KitchenUtensils_01.png
+[5.150s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenUtensils_01/meshes/aws_KitchenUtensils_01_collision.DAE
+[5.164s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenUtensils_01/meshes/aws_KitchenUtensils_01_visual.DAE
+[5.173s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenUtensils_01/model.config
+[5.188s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_KitchenUtensils_01/model.sdf
+[5.205s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_LightC_01/materials/textures/aws_LightC_01.png
+[5.223s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_LightC_01/meshes/aws_LightC_01_collision.DAE
+[5.236s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_LightC_01/meshes/aws_LightC_01_visual.DAE
+[5.251s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_LightC_01/model.config
+[5.268s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_LightC_01/model.sdf
+[5.286s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_NightStand_01/materials/textures/aws_NightStand_01.png
+[5.299s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_NightStand_01/meshes/aws_NightStand_01_collision.DAE
+[5.317s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_NightStand_01/meshes/aws_NightStand_01_visual.DAE
+[5.331s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_NightStand_01/model.config
+[5.344s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_NightStand_01/model.sdf
+[5.357s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Pillow_01/materials/textures/aws_Pillow_01.png
+[5.375s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Pillow_01/meshes/aws_Pillow_01_collision.DAE
+[5.389s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Pillow_01/meshes/aws_Pillow_01_visual.DAE
+[5.399s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Pillow_01/model.config
+[5.419s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Pillow_01/model.sdf
+[5.429s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_01/materials/textures/PortraitA_01.jpg
+[5.435s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_01/materials/textures/aws_PortraitA_01.png
+[5.448s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_01/materials/textures/aws_PortraitA_02.png
+[5.463s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_01/meshes/aws_PortraitA_01_collision.DAE
+[5.478s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_01/meshes/aws_PortraitA_01_visual.DAE
+[5.495s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_01/model.config
+[5.509s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_01/model.sdf
+[5.520s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_02/materials/textures/PortraitA_02.jpg
+[5.534s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_02/materials/textures/aws_PortraitA_01.png
+[5.555s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_02/materials/textures/aws_PortraitA_02.png
+[5.573s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_02/meshes/aws_PortraitA_01_collision.DAE
+[5.583s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_02/meshes/aws_PortraitA_01_visual.DAE
+[5.596s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_02/model.config
+[5.615s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitA_02/model.sdf
+[5.628s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_01/materials/textures/PortraitB_01.jpg
+[5.643s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_01/materials/textures/aws_PortraitB_01.png
+[5.655s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_01/materials/textures/aws_PortraitB_02.png
+[5.672s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_01/meshes/aws_PortraitB_01_collision.DAE
+[5.685s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_01/meshes/aws_PortraitB_01_visual.DAE
+[5.700s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_01/model.config
+[5.714s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_01/model.sdf
+[5.727s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_02/materials/textures/PortraitB_02.jpg
+[5.741s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_02/materials/textures/aws_PortraitB_01.png
+[5.758s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_02/materials/textures/aws_PortraitB_02.png
+[5.773s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_02/meshes/aws_PortraitB_01_collision.DAE
+[5.783s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_02/meshes/aws_PortraitB_01_visual.DAE
+[5.796s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_02/model.config
+[5.813s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_02/model.sdf
+[5.825s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_03/materials/textures/PortraitB_03.jpg
+[5.835s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_03/materials/textures/aws_PortraitB_01.png
+[5.842s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_03/materials/textures/aws_PortraitB_02.png
+[5.853s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_03/meshes/aws_PortraitB_01_collision.DAE
+[5.864s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_03/meshes/aws_PortraitB_01_visual.DAE
+[5.876s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_03/model.config
+[5.892s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitB_03/model.sdf
+[5.910s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitC_01/materials/textures/PortraitC_01.jpg
+[5.929s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitC_01/materials/textures/aws_PortraitC_01.png
+[5.939s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitC_01/materials/textures/aws_PortraitC_02.png
+[5.953s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitC_01/meshes/aws_PortraitC_01_collision.DAE
+[5.964s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitC_01/meshes/aws_PortraitC_01_visual.DAE
+[5.979s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitC_01/model.config
+[5.993s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitC_01/model.sdf
+[6.008s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_01/materials/textures/PortraitD_01.jpg
+[6.024s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_01/materials/textures/aws_PortraitD_01.png
+[6.033s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_01/materials/textures/aws_PortraitD_02.png
+[6.045s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_01/meshes/aws_PortraitD_01_collision.DAE
+[6.057s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_01/meshes/aws_PortraitD_01_visual.DAE
+[6.074s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_01/model.config
+[6.085s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_01/model.sdf
+[6.098s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_02/materials/textures/PortraitD_02.jpg
+[6.114s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_02/materials/textures/aws_PortraitD_01.png
+[6.129s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_02/materials/textures/aws_PortraitD_02.png
+[6.142s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_02/meshes/aws_PortraitD_01_collision.DAE
+[6.159s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_02/meshes/aws_PortraitD_01_visual.DAE
+[6.175s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_02/model.config
+[6.187s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitD_02/model.sdf
+[6.202s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_01/materials/textures/PortraitE_01.jpg
+[6.218s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_01/materials/textures/aws_PortraitE_01.png
+[6.236s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_01/materials/textures/aws_PortraitE_02.png
+[6.244s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_01/meshes/aws_PortraitE_01_collision.DAE
+[6.249s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_01/meshes/aws_PortraitE_01_visual.DAE
+[6.254s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_01/model.config
+[6.260s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_01/model.sdf
+[6.269s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_02/materials/textures/PortraitE_02.jpg
+[6.280s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_02/materials/textures/aws_PortraitE_01.png
+[6.299s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_02/materials/textures/aws_PortraitE_02.png
+[6.313s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_02/meshes/aws_PortraitE_01_collision.DAE
+[6.324s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_02/meshes/aws_PortraitE_01_visual.DAE
+[6.342s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_02/model.config
+[6.354s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_PortraitE_02/model.sdf
+[6.371s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Quilt_01/materials/textures/aws_Quilt_01.png
+[6.389s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Quilt_01/meshes/aws_Quilt_01_collision.DAE
+[6.409s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Quilt_01/meshes/aws_Quilt_01_visual.DAE
+[6.420s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Quilt_01/model.config
+[6.433s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Quilt_01/model.sdf
+[6.447s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Rangehood_01/materials/textures/aws_Rangehood_01.png
+[6.458s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Rangehood_01/meshes/aws_Rangehood_01_collision.DAE
+[6.470s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Rangehood_01/meshes/aws_Rangehood_01_visual.DAE
+[6.485s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Rangehood_01/model.config
+[6.493s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Rangehood_01/model.sdf
+[6.503s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ReadingDesk_01/materials/textures/aws_ReadingDesk_01.png
+[6.524s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ReadingDesk_01/meshes/aws_ReadingDesk_01_collision.DAE
+[6.536s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ReadingDesk_01/meshes/aws_ReadingDesk_01_visual.DAE
+[6.555s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ReadingDesk_01/model.config
+[6.569s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ReadingDesk_01/model.sdf
+[6.578s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Refrigerator_01/materials/textures/aws_Refrigerator_01.png
+[6.588s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Refrigerator_01/materials/textures/aws_Refrigerator_02.png
+[6.598s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Refrigerator_01/meshes/aws_Refrigerator_01.DAE
+[6.611s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Refrigerator_01/meshes/aws_Refrigerator_01_collision.DAE
+[6.626s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Refrigerator_01/meshes/aws_Refrigerator_01_visual.DAE
+[6.638s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Refrigerator_01/model.config
+[6.649s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Refrigerator_01/model.sdf
+[6.666s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomCeiling_01/materials/textures/aws_RoomCeiling_01.png
+[6.682s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomCeiling_01/meshes/aws_RoomCeiling_01_collision.DAE
+[6.694s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomCeiling_01/meshes/aws_RoomCeiling_01_visual.DAE
+[6.704s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomCeiling_01/model.config
+[6.714s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomCeiling_01/model.sdf
+[6.725s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomWall_01/materials/textures/aws_RoomWall_01.png
+[6.741s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomWall_01/meshes/aws_RoomWall_01_collision.DAE
+[6.752s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomWall_01/meshes/aws_RoomWall_01_visual.DAE
+[6.784s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomWall_01/model.config
+[6.803s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomWall_01/model.sdf
+[6.816s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomWindow_01/materials/textures/aws_RoomWindow_01.png
+[6.832s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomWindow_01/meshes/aws_RoomWindow_01_collision.DAE
+[6.843s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomWindow_01/meshes/aws_RoomWindow_01_visual.DAE
+[6.861s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomWindow_01/model.config
+[6.881s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_RoomWindow_01/model.sdf
+[6.902s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SeasoningBox_01/materials/textures/aws_SeasoningBox_01.png
+[6.922s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SeasoningBox_01/meshes/aws_SeasoningBox_01_collision.DAE
+[6.937s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SeasoningBox_01/meshes/aws_SeasoningBox_01_visual.DAE
+[6.959s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SeasoningBox_01/model.config
+[6.975s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SeasoningBox_01/model.sdf
+[6.986s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SecurityCamera_01/materials/textures/aws_SecurityCamera_01.png
+[6.998s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SecurityCamera_01/meshes/aws_SecurityCamera_01_collision.DAE
+[7.014s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SecurityCamera_01/meshes/aws_SecurityCamera_01_visual.DAE
+[7.024s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SecurityCamera_01/model.config
+[7.041s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SecurityCamera_01/model.sdf
+[7.056s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ShoeRack_01/materials/textures/aws_ShoeRack_01.png
+[7.065s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ShoeRack_01/meshes/aws_ShoeRack_01_collision.DAE
+[7.082s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ShoeRack_01/meshes/aws_ShoeRack_01_visual.DAE
+[7.097s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ShoeRack_01/model.config
+[7.107s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_ShoeRack_01/model.sdf
+[7.124s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SofaB_01/materials/textures/aws_SofaB_01.png
+[7.140s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SofaB_01/meshes/aws_SofaB_01_collision.DAE
+[7.156s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SofaB_01/meshes/aws_SofaB_01_visual.DAE
+[7.166s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SofaB_01/model.config
+[7.180s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SofaB_01/model.sdf
+[7.198s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SofaC_01/materials/textures/aws_SofaC_01.png
+[7.214s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SofaC_01/meshes/aws_SofaC_01_collision.DAE
+[7.233s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SofaC_01/meshes/aws_SofaC_01_visual.DAE
+[7.244s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SofaC_01/model.config
+[7.263s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_SofaC_01/model.sdf
+[7.279s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Sofa_01/materials/textures/aws_Sofa_01.png
+[7.295s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Sofa_01/meshes/aws_Sofa_01.DAE
+[7.308s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Sofa_01/meshes/aws_Sofa_01_collision.DAE
+[7.321s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Sofa_01/meshes/aws_Sofa_01_visual.DAE
+[7.335s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Sofa_01/model.config
+[7.346s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Sofa_01/model.sdf
+[7.352s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TVCabinet_01/materials/textures/aws_TVCabinet_01.png
+[7.357s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TVCabinet_01/meshes/aws_TVCabinet_01_collision.DAE
+[7.362s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TVCabinet_01/meshes/aws_TVCabinet_01_visual.DAE
+[7.369s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TVCabinet_01/model.config
+[7.373s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TVCabinet_01/model.sdf
+[7.378s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TV_01/materials/textures/aws_TV_01.png
+[7.386s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TV_01/meshes/aws_TV_01_collision.DAE
+[7.392s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TV_01/meshes/aws_TV_01_visual.DAE
+[7.397s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TV_01/model.config
+[7.401s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TV_01/model.sdf
+[7.410s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TV_02/materials/textures/aws_TV_01.png
+[7.418s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TV_02/meshes/aws_TV_01_collision.DAE
+[7.431s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TV_02/meshes/aws_TV_01_visual.DAE
+[7.437s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TV_02/model.config
+[7.444s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_TV_02/model.sdf
+[7.451s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tablet_01/.DS_Store
+[7.456s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tablet_01/materials/.DS_Store
+[7.461s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tablet_01/materials/textures/aws_Tablet_01_nologo.png
+[7.466s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tablet_01/meshes/aws_Tablet_01_collision.DAE
+[7.473s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tablet_01/meshes/aws_Tablet_01_visual.DAE
+[7.482s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tablet_01/model.config
+[7.490s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tablet_01/model.sdf
+[7.496s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tableware_01/materials/textures/aws_Tableware_01.png
+[7.501s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tableware_01/meshes/aws_Tableware_01_collision.DAE
+[7.508s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tableware_01/meshes/aws_Tableware_01_visual.DAE
+[7.514s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tableware_01/model.config
+[7.518s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Tableware_01/model.sdf
+[7.523s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Trash_01/materials/textures/aws_Trash_01.png
+[7.532s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Trash_01/meshes/aws_Trash_01_collision.DAE
+[7.538s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Trash_01/meshes/aws_Trash_01_visual.DAE
+[7.543s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Trash_01/model.config
+[7.550s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Trash_01/model.sdf
+[7.555s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Vase_01/materials/textures/aws_Vase_01.png
+[7.562s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Vase_01/meshes/aws_Vase_01_collision.DAE
+[7.567s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Vase_01/meshes/aws_Vase_01_visual.DAE
+[7.573s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Vase_01/model.config
+[7.585s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Vase_01/model.sdf
+[7.598s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Wardrobe_01/materials/textures/aws_Wardrobe_01.png
+[7.613s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Wardrobe_01/meshes/aws_Wardrobe_01_collision.DAE
+[7.631s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Wardrobe_01/meshes/aws_Wardrobe_01_visual.DAE
+[7.644s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Wardrobe_01/model.config
+[7.663s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_residential_Wardrobe_01/model.sdf
+[7.676s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Bucket_01/.DS_Store
+[7.690s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Bucket_01/materials/.DS_Store
+[7.706s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Bucket_01/materials/textures/aws_robomaker_warehouse_Bucket_01.png
+[7.719s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Bucket_01/meshes/aws_robomaker_warehouse_Bucket_01_collision.DAE
+[7.737s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Bucket_01/meshes/aws_robomaker_warehouse_Bucket_01_visual.DAE
+[7.758s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Bucket_01/model.config
+[7.779s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Bucket_01/model.sdf
+[7.793s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringA_01/.DS_Store
+[7.808s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringA_01/materials/.DS_Store
+[7.820s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringA_01/materials/textures/.DS_Store
+[7.843s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringA_01/materials/textures/aws_robomaker_warehouse_ClutteringA_01.png
+[7.856s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringA_01/materials/textures/aws_robomaker_warehouse_ClutteringA_02.png
+[7.869s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringA_01/materials/textures/aws_robomaker_warehouse_ClutteringA_03.png
+[7.883s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringA_01/meshes/aws_robomaker_warehouse_ClutteringA_01_collision.DAE
+[7.893s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringA_01/meshes/aws_robomaker_warehouse_ClutteringA_01_visual.DAE
+[7.910s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringA_01/model.config
+[7.927s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringA_01/model.sdf
+[7.947s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringC_01/materials/textures/aws_robomaker_warehouse_ClutteringC_01.png
+[7.967s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringC_01/materials/textures/aws_robomaker_warehouse_ClutteringC_02.png
+[7.984s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringC_01/meshes/aws_robomaker_warehouse_ClutteringC_01_collision.DAE
+[7.992s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringC_01/meshes/aws_robomaker_warehouse_ClutteringC_01_visual.DAE
+[8.004s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringC_01/model.config
+[8.013s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringC_01/model.sdf
+[8.033s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringD_01/materials/textures/aws_robomaker_warehouse_ClutteringD_01.png
+[8.050s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringD_01/materials/textures/aws_robomaker_warehouse_ClutteringD_02.png
+[8.065s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringD_01/meshes/aws_robomaker_warehouse_ClutteringD_01_collision.DAE
+[8.078s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringD_01/meshes/aws_robomaker_warehouse_ClutteringD_01_visual.DAE
+[8.090s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringD_01/model.config
+[8.102s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ClutteringD_01/model.sdf
+[8.123s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_DeskC_01/materials/.DS_Store
+[8.139s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_DeskC_01/materials/textures/aws_robomaker_warehouse_DeskC_01.png
+[8.157s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_DeskC_01/materials/textures/aws_robomaker_warehouse_DeskC_02.png
+[8.171s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_DeskC_01/materials/textures/aws_robomaker_warehouse_DeskC_03.png
+[8.182s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_DeskC_01/materials/textures/aws_robomaker_warehouse_DeskC_03.psd
+[8.203s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_DeskC_01/materials/textures/aws_robomaker_warehouse_DeskC_04.png
+[8.223s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_DeskC_01/meshes/aws_robomaker_warehouse_DeskC_01_collision.DAE
+[8.240s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_DeskC_01/meshes/aws_robomaker_warehouse_DeskC_01_visual.DAE
+[8.259s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_DeskC_01/model.config
+[8.277s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_DeskC_01/model.sdf
+[8.292s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_GroundB_01/materials/textures/aws_robomaker_warehouse_GroundB_01.png
+[8.308s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_GroundB_01/materials/textures/aws_robomaker_warehouse_GroundB_02.png
+[8.324s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_GroundB_01/meshes/aws_robomaker_warehouse_GroundB_01_collision.DAE
+[8.344s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_GroundB_01/meshes/aws_robomaker_warehouse_GroundB_01_visual.DAE
+[8.359s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_GroundB_01/model.config
+[8.380s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_GroundB_01/model.sdf
+[8.396s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Lamp_01/materials/textures/aws_robomaker_warehouse_Lamp_01.png
+[8.412s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Lamp_01/meshes/aws_robomaker_warehouse_Lamp_01_collision.DAE
+[8.425s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Lamp_01/meshes/aws_robomaker_warehouse_Lamp_01_visual.DAE
+[8.444s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Lamp_01/model.config
+[8.460s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_Lamp_01/model.sdf
+[8.473s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_PalletJackB_01/.DS_Store
+[8.486s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_PalletJackB_01/materials/.DS_Store
+[8.503s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_PalletJackB_01/materials/textures/aws_robomaker_warehouse_PalletJackB_01.png
+[8.520s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_PalletJackB_01/materials/textures/aws_robomaker_warehouse_PalletJackB_02.png
+[8.538s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_PalletJackB_01/meshes/aws_robomaker_warehouse_PalletJackB_01_collision.DAE
+[8.559s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_PalletJackB_01/meshes/aws_robomaker_warehouse_PalletJackB_01_visual.DAE
+[8.570s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_PalletJackB_01/model.config
+[8.585s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_PalletJackB_01/model.sdf
+[8.598s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_RoofB_01/materials/textures/aws_robomaker_warehouse_RoofB_01.png
+[8.611s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_RoofB_01/meshes/aws_robomaker_warehouse_RoofB_01_collision.DAE
+[8.625s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_RoofB_01/meshes/aws_robomaker_warehouse_RoofB_01_visual.DAE
+[8.640s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_RoofB_01/model.config
+[8.659s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_RoofB_01/model.sdf
+[8.671s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfD_01/materials/textures/aws_robomaker_warehouse_ShelfD_01.png
+[8.686s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfD_01/materials/textures/aws_robomaker_warehouse_ShelfD_02.png
+[8.701s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfD_01/materials/textures/aws_robomaker_warehouse_ShelfD_03.png
+[8.715s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfD_01/materials/textures/aws_robomaker_warehouse_ShelfD_04.png
+[8.728s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfD_01/meshes/aws_robomaker_warehouse_ShelfD_01_collision.DAE
+[8.745s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfD_01/meshes/aws_robomaker_warehouse_ShelfD_01_visual.DAE
+[8.762s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfD_01/model.config
+[8.773s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfD_01/model.sdf
+[8.783s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfE_01/.DS_Store
+[8.796s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfE_01/materials/.DS_Store
+[8.804s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfE_01/materials/textures/aws_robomaker_warehouse_ShelfE_01.png
+[8.814s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfE_01/materials/textures/aws_robomaker_warehouse_ShelfE_02.png
+[8.819s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfE_01/materials/textures/aws_robomaker_warehouse_ShelfE_03.png
+[8.826s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfE_01/materials/textures/aws_robomaker_warehouse_ShelfE_04.png
+[8.835s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfE_01/meshes/aws_robomaker_warehouse_ShelfE_01_collision.DAE
+[8.842s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfE_01/meshes/aws_robomaker_warehouse_ShelfE_01_visual.DAE
+[8.847s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfE_01/model.config
+[8.853s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfE_01/model.sdf
+[8.858s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfF_01/materials/textures/aws_robomaker_warehouse_ShelfF_01.png
+[8.864s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfF_01/materials/textures/aws_robomaker_warehouse_ShelfF_02.png
+[8.871s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfF_01/materials/textures/aws_robomaker_warehouse_ShelfF_03.png
+[8.876s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfF_01/meshes/aws_robomaker_warehouse_ShelfF_01_collision.DAE
+[8.885s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfF_01/meshes/aws_robomaker_warehouse_ShelfF_01_visual.DAE
+[8.892s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfF_01/model.config
+[8.897s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_ShelfF_01/model.sdf
+[8.902s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_TrashCanC_01/materials/textures/aws_robomaker_warehouse_TrashCanC_01.png
+[8.906s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_TrashCanC_01/meshes/aws_robomaker_warehouse_TrashCanC_01_collision.DAE
+[8.913s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_TrashCanC_01/meshes/aws_robomaker_warehouse_TrashCanC_01_visual.DAE
+[8.918s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_TrashCanC_01/model.config
+[8.928s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_TrashCanC_01/model.sdf
+[8.938s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_WallB_01/materials/textures/aws_robomaker_warehouse_WallB_01.png
+[8.949s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_WallB_01/meshes/aws_robomaker_warehouse_WallB_01_collision.DAE
+[8.960s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_WallB_01/meshes/aws_robomaker_warehouse_WallB_01_visual.DAE
+[8.971s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_WallB_01/model.config
+[8.986s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/aws_robomaker_warehouse_WallB_01/model.sdf
+[8.996s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/brown_table/model.config
+[9.003s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/brown_table/model.sdf
+[9.010s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_10.jpg
+[9.018s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_2.jpg
+[9.024s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_21.jpg
+[9.033s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_22.jpg
+[9.041s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_23.jpg
+[9.050s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_24.jpg
+[9.062s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_25.jpg
+[9.072s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_26.jpg
+[9.084s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_28.jpg
+[9.096s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_29.jpg
+[9.116s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_30.jpg
+[9.129s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_31.jpg
+[9.140s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_34.jpg
+[9.151s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_35.jpg
+[9.164s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/materials/textures/__auto_37.jpg
+[9.178s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/meshes/cafe.dae
+[9.188s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/model.config
+[9.201s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe/model.sdf
+[9.216s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_counter/materials/textures/cafe_counter.png
+[9.237s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_counter/meshes/cafe_counter.mtl
+[9.256s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_counter/meshes/cafe_counter.obj
+[9.269s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_counter/meshes/counter_no_sink.obj
+[9.286s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_counter/meshes/counter_sink.obj
+[9.305s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_counter/model.config
+[9.315s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_counter/model.sdf
+[9.324s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_table/materials/textures/Maple.jpg
+[9.334s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_table/materials/textures/Wood_Floor_Dark.jpg
+[9.340s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_table/meshes/cafe_table.dae
+[9.354s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_table/model-1_4.sdf
+[9.365s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_table/model.config
+[9.376s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cafe_table/model.sdf
+[9.392s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cardboard_box/materials/textures/cardboard_box.png
+[9.403s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cardboard_box/meshes/cardboard_box.dae
+[9.421s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cardboard_box/meshes/cardboard_box.png
+[9.434s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cardboard_box/model.config
+[9.446s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cardboard_box/model.sdf
+[9.464s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cheezit_big_original/meshes/cheez_tex_0.jpg
+[9.482s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cheezit_big_original/meshes/cheezit_big_original.dae
+[9.494s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cheezit_big_original/model.config
+[9.513s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/cheezit_big_original/model.sdf
+[9.532s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/coke_can/materials/textures/coke_can.png
+[9.544s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/coke_can/meshes/coke_can.dae
+[9.563s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/coke_can/model-1_2.sdf
+[9.574s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/coke_can/model-1_3.sdf
+[9.586s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/coke_can/model-1_4.sdf
+[9.604s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/coke_can/model.config
+[9.619s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/coke_can/model.sdf
+[9.631s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/ground_plane/model-1_2.sdf
+[9.643s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/ground_plane/model-1_3.sdf
+[9.659s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/ground_plane/model-1_4.sdf
+[9.675s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/ground_plane/model.config
+[9.689s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/ground_plane/model.sdf
+[9.707s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/mustard/materials/scripts/mustard.material
+[9.721s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/mustard/materials/textures/optimized_tsdf_texture_mapped_mesh.png
+[9.736s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/mustard/meshes/mustard.dae
+[9.747s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/mustard/meshes/texture_map.png
+[9.762s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/mustard/model.config
+[9.767s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/mustard/model.sdf
+[9.775s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/red_cylinder/model.config
+[9.782s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/red_cylinder/model.sdf
+[9.791s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/sun/model-1_2.sdf
+[9.801s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/sun/model-1_3.sdf
+[9.812s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/sun/model-1_4.sdf
+[9.823s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/sun/model.config
+[9.836s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/models/sun/model.sdf
+[9.847s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/rviz/yahboom_rosmaster_gazebo_sim.rviz
+[9.861s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/worlds/cafe.world
+[9.879s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/worlds/empty.world
+[9.889s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/worlds/house.world
+[9.906s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/worlds/pick_and_place_demo.world
+[9.921s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/ament_index/resource_index/package_run_dependencies/yahboom_rosmaster_gazebo
+[9.937s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/ament_index/resource_index/parent_prefix_path/yahboom_rosmaster_gazebo
+[9.949s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/environment/ament_prefix_path.sh
+[9.964s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/environment/ament_prefix_path.dsv
+[9.975s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/environment/path.sh
+[9.990s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/environment/path.dsv
+[10.006s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/local_setup.bash
+[10.018s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/local_setup.sh
+[10.034s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/local_setup.zsh
+[10.050s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/local_setup.dsv
+[10.063s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/package.dsv
+[10.076s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/ament_index/resource_index/packages/yahboom_rosmaster_gazebo
+[10.090s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/cmake/yahboom_rosmaster_gazeboConfig.cmake
+[10.107s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/cmake/yahboom_rosmaster_gazeboConfig-version.cmake
+[10.121s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_gazebo/share/yahboom_rosmaster_gazebo/package.xml
+[10.138s] Invoked command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/itadmin/addison_ws/build/yahboom_rosmaster_gazebo

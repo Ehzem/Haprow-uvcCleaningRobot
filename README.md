@@ -73,6 +73,9 @@ starting from commit `6f99244`. Existing package license files are preserved.
 The hospital and UVC visuals were converted from the CAD exports supplied for
 this project. Original Downloads files are not required to run the simulation.
 
-Host build products (`build/`, `install/`, `log/`), credentials, and local
-upstream Git metadata are excluded from version control. Rebuild the workspace
-after cloning; Docker images are built separately rather than committed here.
+The repository includes `build/`, `install/`, and `log/` as a snapshot of the
+current host workspace, in addition to all source and Docker configuration.
+Generated setup files, CMake caches, and symbolic links can contain absolute paths
+to `/home/itadmin/addison_ws` and `/opt/ros/jazzy`, so another machine may need a
+fresh build. Credentials and local upstream Git metadata remain excluded.
+Docker images are built separately rather than committed here.
