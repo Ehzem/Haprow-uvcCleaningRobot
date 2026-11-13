@@ -1,0 +1,874 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+  <model name="operating_theatre">
+    <static>true</static>
+    <link name="structure">
+      <visual name="body_1_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_1_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_3_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_3.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1.0</ambient>
+          <diffuse>1.0 1.0 1.0 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_3_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_3.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_5_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_5.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1.0</ambient>
+          <diffuse>1.0 1.0 1.0 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_5_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_5.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_9_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_9.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1.0</ambient>
+          <diffuse>1.0 1.0 1.0 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_9_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_9.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_13_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_13.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_13_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_13.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_17_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_17.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_17_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_17.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_21_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_21.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_21_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_21.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_25_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_25.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_25_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_25.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_29_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_29.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_29_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_29.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_33_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_33.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_33_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_33.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_37_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_37.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_37_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_37.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_41_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_41.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_41_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_41.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_45_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_45.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_45_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_45.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_49_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_49.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_49_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_49.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_51_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_51.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1.0</ambient>
+          <diffuse>1.0 1.0 1.0 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_51_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_51.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_55_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_55.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_55_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_55.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_59_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_59.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_59_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_59.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_63_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_63.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_63_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_63.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_67_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_67.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_67_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_67.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_71_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_71.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_71_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_71.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_75_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_75.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_75_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_75.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_79_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_79.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_79_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_79.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_83_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_83.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_83_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_83.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_87_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_87.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_87_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_87.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_91_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_91.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_91_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_91.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_95_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_95.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_95_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_95.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_97_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_97.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1.0</ambient>
+          <diffuse>1.0 1.0 1.0 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_97_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_97.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_101_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_101.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_101_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_101.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_105_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_105.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_105_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_105.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_109_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_109.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_109_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_109.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_113_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_113.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_113_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_113.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_117_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_117.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_117_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_117.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_121_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_121.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_121_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_121.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_125_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_125.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_125_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_125.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_127_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_127.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0</ambient>
+          <diffuse>0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_127_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_127.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_133_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_133.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_133_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_133.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_135_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_135.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1.0</ambient>
+          <diffuse>1.0 1.0 1.0 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_135_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_135.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_139_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_139.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_139_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_139.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_141_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_141.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.10196078431372549 0.10196078431372549 0.10196078431372549 1.0</ambient>
+          <diffuse>0.10196078431372549 0.10196078431372549 0.10196078431372549 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_141_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_141.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_145_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_145.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_145_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_145.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_147_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_147.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0</ambient>
+          <diffuse>0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_147_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_147.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_151_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_151.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_151_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_151.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_153_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_153.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0</ambient>
+          <diffuse>0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_153_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_153.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_157_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_157.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_157_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_157.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_159_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_159.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0</ambient>
+          <diffuse>0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_159_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_159.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_163_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_163.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</ambient>
+          <diffuse>0.6392156862745098 0.6666666666666666 0.6784313725490196 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_163_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_163.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="body_165_visual">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_165.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0</ambient>
+          <diffuse>0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="body_165_collision">
+        <geometry>
+          <mesh>
+            <uri>model://operating_theatre/meshes/body_165.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="continuous_floor_collision">
+        <pose>0 0 -0.025 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>8.3 6.0 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="continuous_floor_visual">
+        <pose>0 0 -0.025 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>8.3 6.0 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.55 0.65 0.65 1</ambient>
+          <diffuse>0.55 0.65 0.65 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

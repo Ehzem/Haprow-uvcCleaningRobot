@@ -1,0 +1,10 @@
+# Optional Intel/AMD acceleration; layer on top of compose.gui.yaml.
+services:
+  workspace:
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - ${VIDEO_GID:?Set VIDEO_GID to the host video group ID}
+      - ${RENDER_GID:?Set RENDER_GID to the host render group ID}
+    environment:
+      LIBGL_ALWAYS_SOFTWARE: "0"

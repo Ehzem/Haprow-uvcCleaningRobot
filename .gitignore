@@ -1,0 +1,38 @@
+# ROS/colcon build products: regenerate these after cloning.
+/build/
+/install/
+/log/
+
+# Original upstream Git history retained locally, never uploaded.
+/.upstream-git/
+**/.git/
+
+# Local tools, authentication, and machine-specific settings.
+/.agents/
+/.aws/
+/.codex/
+/.ssh/
+/.vscode/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.xauth
+
+# Python caches and editor/OS temporary files.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Generated logs, recordings and database sidecars.
+*.log
+*.bag
+*.db3
+*.mcap
+*-wal
+*-shm

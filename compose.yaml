@@ -1,0 +1,20 @@
+name: addison-workspace
+services:
+  workspace:
+    image: addison-workspace:jazzy
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER_UID: ${LOCAL_UID:-1000}
+        USER_GID: ${LOCAL_GID:-1000}
+        BUILD_JOBS: ${BUILD_JOBS:-2}
+    network_mode: host
+    shm_size: 1gb
+    stdin_open: true
+    tty: true
+    environment:
+      ROS_DOMAIN_ID: ${ROS_DOMAIN_ID:-42}
+      GZ_PARTITION: ${GZ_PARTITION:-addison_docker}
+      RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+    command: ["bash"]

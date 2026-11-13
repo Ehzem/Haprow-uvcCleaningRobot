@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="uvc_robot">
+  <link name="base_footprint" />
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.10 0 0.45" />
+      <mass value="35" />
+      <inertia ixx="9.5" iyy="9.7" izz="1.8" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="chassis">
+      <origin xyz="0.10886 0 0.19315" />
+      <geometry>
+        <box size="0.50 0.40 0.28" />
+      </geometry>
+    </collision>
+    <collision name="bumpers">
+      <origin xyz="0.10886 0 0.17315" />
+      <geometry>
+        <box size="0.524 0.424 0.04" />
+      </geometry>
+    </collision>
+    <collision name="tower_and_lamps">
+      <origin xyz="0.10886 0 1.03" />
+      <geometry>
+        <box size="0.29 0.29 1.49" />
+      </geometry>
+    </collision>
+    <collision name="sensor_platform">
+      <origin xyz="0.124 0 1.84065" />
+      <geometry>
+        <box size="0.33 0.30 0.115" />
+      </geometry>
+    </collision>
+    <visual name="cad_part_00">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_00.stl" />
+      </geometry>
+      <material name="material_0">
+        <color rgba="0.960784 0.960784 0.964706 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_01">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_01.stl" />
+      </geometry>
+      <material name="material_1">
+        <color rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_02">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_02.stl" />
+      </geometry>
+      <material name="material_2">
+        <color rgba="0.960784 0.960784 0.964706 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_03">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_03.stl" />
+      </geometry>
+      <material name="material_3">
+        <color rgba="0.960784 0.960784 0.964706 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_04">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_04.stl" />
+      </geometry>
+      <material name="material_4">
+        <color rgba="0.960784 0.960784 0.964706 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_05">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_05.stl" />
+      </geometry>
+      <material name="material_5">
+        <color rgba="0.960784 0.960784 0.964706 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_06">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_06.stl" />
+      </geometry>
+      <material name="material_6">
+        <color rgba="0.796078 0.796078 0.796078 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_07">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_07.stl" />
+      </geometry>
+      <material name="material_7">
+        <color rgba="0.796078 0.796078 0.796078 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_08">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_08.stl" />
+      </geometry>
+      <material name="material_8">
+        <color rgba="0.796078 0.796078 0.796078 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_09">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_09.stl" />
+      </geometry>
+      <material name="material_9">
+        <color rgba="0.796078 0.796078 0.796078 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_10">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_10.stl" />
+      </geometry>
+      <material name="material_10">
+        <color rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_11">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_11.stl" />
+      </geometry>
+      <material name="material_11">
+        <color rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_12">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_12.stl" />
+      </geometry>
+      <material name="material_12">
+        <color rgba="0.909804 0.678431 0.137255 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_13">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_13.stl" />
+      </geometry>
+      <material name="material_13">
+        <color rgba="0.909804 0.678431 0.137255 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_14">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_14.stl" />
+      </geometry>
+      <material name="material_14">
+        <color rgba="0.909804 0.678431 0.137255 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_15">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_15.stl" />
+      </geometry>
+      <material name="material_15">
+        <color rgba="0.909804 0.678431 0.137255 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_17">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_17.stl" />
+      </geometry>
+      <material name="material_17">
+        <color rgba="0.349020 0.349020 0.349020 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_19">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_19.stl" />
+      </geometry>
+      <material name="material_19">
+        <color rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_20">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_20.stl" />
+      </geometry>
+      <material name="material_20">
+        <color rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_21">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_21.stl" />
+      </geometry>
+      <material name="material_21">
+        <color rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_22">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_22.stl" />
+      </geometry>
+      <material name="material_22">
+        <color rgba="0.392157 0.000000 0.784314 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_23">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_23.stl" />
+      </geometry>
+      <material name="material_23">
+        <color rgba="0.392157 0.000000 0.784314 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_24">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_24.stl" />
+      </geometry>
+      <material name="material_24">
+        <color rgba="0.392157 0.000000 0.784314 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_25">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_25.stl" />
+      </geometry>
+      <material name="material_25">
+        <color rgba="0.392157 0.000000 0.784314 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_26">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_26.stl" />
+      </geometry>
+      <material name="material_26">
+        <color rgba="0.964706 0.964706 0.952941 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_27">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_27.stl" />
+      </geometry>
+      <material name="material_27">
+        <color rgba="0.964706 0.964706 0.952941 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_28">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_28.stl" />
+      </geometry>
+      <material name="material_28">
+        <color rgba="0.964706 0.964706 0.952941 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_29">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_29.stl" />
+      </geometry>
+      <material name="material_29">
+        <color rgba="0.964706 0.964706 0.952941 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_30">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_30.stl" />
+      </geometry>
+      <material name="material_30">
+        <color rgba="0.964706 0.964706 0.952941 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_31">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_31.stl" />
+      </geometry>
+      <material name="material_31">
+        <color rgba="0.627451 0.627451 0.627451 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_32">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_32.stl" />
+      </geometry>
+      <material name="material_32">
+        <color rgba="0.627451 0.627451 0.627451 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_33">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_33.stl" />
+      </geometry>
+      <material name="material_33">
+        <color rgba="0.627451 0.627451 0.627451 1" />
+      </material>
+    </visual>
+    <visual name="cad_part_34">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_34.stl" />
+      </geometry>
+      <material name="material_34">
+        <color rgba="0.627451 0.627451 0.627451 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+  </joint>
+  <link name="left_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="0.0019" iyy="0.0032" izz="0.0019" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <origin rpy="1.57079632679 0 0" />
+      <geometry>
+        <cylinder radius=".08" length=".0613" />
+      </geometry>
+    </collision>
+    <visual name="cad_part_18">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_18.stl" />
+      </geometry>
+      <material name="material_18">
+        <color rgba="0.152941 0.152941 0.152941 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="left_wheel_link" />
+    <origin xyz="0 0.16022 .08" />
+    <axis xyz="0 1 0" />
+    <limit effort="25" velocity="10" />
+  </joint>
+  <gazebo reference="left_wheel_link">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+  <link name="right_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="0.0019" iyy="0.0032" izz="0.0019" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <origin rpy="1.57079632679 0 0" />
+      <geometry>
+        <cylinder radius=".08" length=".0613" />
+      </geometry>
+    </collision>
+    <visual name="cad_part_16">
+      <geometry>
+        <mesh filename="package://uvc_robot_description/meshes/uvc_robot/part_16.stl" />
+      </geometry>
+      <material name="material_16">
+        <color rgba="0.152941 0.152941 0.152941 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="right_wheel_link" />
+    <origin xyz="0 -0.16022 .08" />
+    <axis xyz="0 1 0" />
+    <limit effort="25" velocity="10" />
+  </joint>
+  <gazebo reference="right_wheel_link">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+  <link name="left_caster_link">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.2" />
+      <inertia ixx="0.0001" iyy="0.0001" izz="0.0001" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <geometry>
+        <sphere radius=".03725" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_caster_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="left_caster_link" />
+    <origin xyz=".274 0.15 .03725" />
+  </joint>
+  <gazebo reference="left_caster_joint">
+    <preserveFixedJoint>true</preserveFixedJoint>
+  </gazebo>
+  <gazebo reference="left_caster_link">
+    <mu1>0.01</mu1>
+    <mu2>0.01</mu2>
+  </gazebo>
+  <link name="right_caster_link">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.2" />
+      <inertia ixx="0.0001" iyy="0.0001" izz="0.0001" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <geometry>
+        <sphere radius=".03725" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_caster_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="right_caster_link" />
+    <origin xyz=".274 -0.15 .03725" />
+  </joint>
+  <gazebo reference="right_caster_joint">
+    <preserveFixedJoint>true</preserveFixedJoint>
+  </gazebo>
+  <gazebo reference="right_caster_link">
+    <mu1>0.01</mu1>
+    <mu2>0.01</mu2>
+  </gazebo>
+  <link name="laser_frame">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.01" />
+      <inertia ixx="1e-05" iyy="1e-05" izz="1e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="laser_frame_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="laser_frame" />
+    <origin xyz=".39 0 .34" />
+  </joint>
+  <link name="imu_link">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.01" />
+      <inertia ixx="1e-05" iyy="1e-05" izz="1e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="imu_link_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="imu_link" />
+    <origin xyz=".10 0 .20" />
+  </joint>
+  <gazebo reference="laser_frame">
+    <sensor name="uvc_lidar" type="gpu_lidar">
+      <topic>/scan</topic>
+      <gz_frame_id>laser_frame</gz_frame_id>
+      <update_rate>10</update_rate>
+      <always_on>true</always_on>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159265</min_angle>
+            <max_angle>3.14159265</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>.12</min>
+          <max>20</max>
+          <resolution>.01</resolution>
+        </range>
+      </ray>
+    </sensor>
+  </gazebo>
+  <gazebo reference="imu_link">
+    <sensor name="uvc_imu" type="imu">
+      <topic>/imu/data</topic>
+      <gz_frame_id>imu_link</gz_frame_id>
+      <update_rate>50</update_rate>
+      <always_on>true</always_on>
+    </sensor>
+  </gazebo>
+  <gazebo>
+    <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>.32044</wheel_separation>
+      <wheel_radius>.08</wheel_radius>
+      <topic>/cmd_vel</topic>
+      <odom_topic>/odom</odom_topic>
+      <tf_topic>/tf</tf_topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_footprint</child_frame_id>
+      <odom_publish_frequency>30</odom_publish_frequency>
+      <max_linear_velocity>.3</max_linear_velocity>
+      <max_angular_velocity>1</max_angular_velocity>
+      <max_linear_acceleration>.5</max_linear_acceleration>
+    </plugin>
+    <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+      <topic>/joint_states</topic>
+      <joint_name>left_wheel_joint</joint_name>
+      <joint_name>right_wheel_joint</joint_name>
+    </plugin>
+  </gazebo>
+</robot>

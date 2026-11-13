@@ -1,0 +1,18 @@
+# Only source and container setup belong in the image.
+**
+!Dockerfile
+!src/
+!src/**
+!docker/
+!docker/**
+**/.git
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.DS_Store
+# Never include host credentials, X11 cookies or environment overrides.
+**/.aws
+**/.codex
+**/.agents
+**/.env
+**/*.xauth
