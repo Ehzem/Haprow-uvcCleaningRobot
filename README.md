@@ -102,7 +102,11 @@ has been pushed or backed up.
 ### 4. Verify the workspace — inside Docker
 
 ```bash
-test -f /.dockerenv && echo "You are inside Docker"
+if [ -f /.dockerenv ]; then
+    echo "You are inside Docker"
+else
+    echo "You are on the host"
+fi
 
 cd /home/itadmin/addison_ws
 ls src
