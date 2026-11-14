@@ -1,13 +1,18 @@
 # Operating theatre with UVC robot
 
-Launch from a terminal on the desktop:
+For a native host run, first follow the [main README native-build steps](../../../README.md#build-and-run-natively),
+then launch from a desktop terminal:
 
 ```bash
-cd /home/itadmin/addison_ws
+cd ~/addison_ws
 source /opt/ros/jazzy/setup.bash
-source install/setup.bash
+source .native-install/setup.bash
 ros2 launch yahboom_rosmaster_gazebo operating_theatre.launch.py
 ```
+
+Inside Docker, use the already sourced shell and the same `ros2 launch` command.
+GUI windows need the [Docker GUI configuration](../../../docker/README.md#gazebo-and-rviz-windows);
+`workspace-tmux --headless` handles a server without a display.
 
 This starts the theatre and the supplied UVC CAD robot, with differential drive,
 odometry, simulated lidar and IMU, ROS bridges, robot transforms, and RViz.
@@ -44,7 +49,9 @@ stops the robot. The model limits linear speed to 0.3 m/s and turning speed to
 `uvc_robot_description/urdf/robots/uvc_robot.urdf` and
 `uvc_robot_description/meshes/uvc_robot/` contain the imported robot. Its
 state-publisher launch and RViz configuration also live in that description
-package; the Gazebo package keeps the theatre world and simulation bridge. The source is `UVC Robot V 67.obj` with its supplied MTL; these particular
+package; the Gazebo package keeps the theatre world and simulation bridge.
+Paths above are relative to `src/yahboom_rosmaster/`.
+The source is `UVC Robot V 67.obj` with its supplied MTL; these particular
 OBJ coordinates are centimetres. The 35 mesh parts retain their material colours.
 The model is approximately 0.56 m long, 0.46 m wide, and 1.90 m tall.
 Its drive wheels have 0.08 m radius and 0.32044 m centre separation, measured
@@ -62,10 +69,15 @@ Camera streams from the X3 are not reproduced by this launch.
 To regenerate the robot from the same source export:
 
 ```bash
-python3 src/yahboom_rosmaster/uvc_robot_description/scripts/import_uvc_robot.py '/home/itadmin/Downloads/UVC Robot V 67.obj'
-colcon build --packages-select uvc_robot_description yahboom_rosmaster_gazebo --symlink-install
+python3 src/yahboom_rosmaster/uvc_robot_description/scripts/import_uvc_robot.py "$HOME/Downloads/UVC Robot V 67.obj"
+colcon --log-base .native-log build --build-base .native-build --install-base .native-install \
+  --packages-select uvc_robot_description yahboom_rosmaster_gazebo --symlink-install
+source .native-install/setup.bash
 ```
 
+These regeneration examples assume a native build and access to the original
+CAD files, which are not included in GitHub or the Docker image. Inside Docker,
+rebuild with ordinary `colcon build` using its existing `build/` and `install/`.
 The importer requires only Python's standard library. Runtime uses installed
 local meshes and does not need the files in Downloads.
 
@@ -87,8 +99,10 @@ No external model downloads are needed for the world.
 To regenerate the theatre:
 
 ```bash
-python3 src/yahboom_rosmaster/yahboom_rosmaster_gazebo/scripts/import_operating_theatre.py '/home/itadmin/Downloads/hospital assembly.3mf'
-colcon build --packages-select uvc_robot_description yahboom_rosmaster_gazebo --symlink-install
+python3 src/yahboom_rosmaster/yahboom_rosmaster_gazebo/scripts/import_operating_theatre.py "$HOME/Downloads/hospital assembly.3mf"
+colcon --log-base .native-log build --build-base .native-build --install-base .native-install \
+  --packages-select uvc_robot_description yahboom_rosmaster_gazebo --symlink-install
+source .native-install/setup.bash
 ```
 
 The axis transforms, component names and tile/ceiling selection in the importers

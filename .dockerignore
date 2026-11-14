@@ -19,4 +19,10 @@
 **/.codex
 **/.agents
 **/.env
+**/.env.*
+!**/.env.example
+**/.ssh
+**/.config/gh
+**/*.pem
+**/*.key
 **/*.xauth

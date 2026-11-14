@@ -11,6 +11,9 @@ This package follows the layout of `yahboom_rosmaster_description`:
 The theatre world, environment meshes, ROS–Gazebo bridge and simulation launch
 remain in `yahboom_rosmaster_gazebo`.
 
+First build/source the native workspace using the
+[main README](../../../README.md#build-and-run-natively), or open the Docker
+development shell, which sources its environment automatically.
 Start the simulation using:
 
 ```bash
@@ -29,8 +32,19 @@ publisher; RViz also needs an available fixed frame, e.g. `base_footprint`.
 Regenerate the imported robot from the supplied centimetre-scale OBJ and MTL:
 
 ```bash
-python3 src/yahboom_rosmaster/uvc_robot_description/scripts/import_uvc_robot.py '/home/itadmin/Downloads/UVC Robot V 67.obj'
+python3 src/yahboom_rosmaster/uvc_robot_description/scripts/import_uvc_robot.py "$HOME/Downloads/UVC Robot V 67.obj"
+colcon --log-base .native-log build --build-base .native-build --install-base .native-install \
+  --packages-select uvc_robot_description --symlink-install
+source .native-install/setup.bash
+```
+
+The regeneration commands above use the native host layout. They need the
+original OBJ/MTL files, which are not included in GitHub or Docker. For an
+existing Docker workspace, use these commands instead:
+
+```bash
 colcon build --packages-select uvc_robot_description --symlink-install
+source install/setup.bash
 ```
 
 Physical mass, inertia, caster contacts and collision shapes are approximations.

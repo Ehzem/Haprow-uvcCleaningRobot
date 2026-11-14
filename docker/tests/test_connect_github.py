@@ -36,17 +36,20 @@ class ConnectTests(unittest.TestCase):
     def connect(self):
         module.connect(self.workspace, str(self.remote), 'main')
 
-    def test_preserves_edits_and_outputs_but_restores_missing_source(self):
+    def test_preserves_edits_additions_deletions_and_generated_outputs(self):
         source = self.workspace / 'src/example.txt'
         source.parent.mkdir()
         source.write_text('local work')
         output = self.workspace / 'build/generated.txt'
         output.parent.mkdir()
         output.write_text('container output')
+        addition = self.workspace / 'src/new.txt'
+        addition.write_text('new local file')
         self.connect()
         self.assertEqual(source.read_text(), 'local work')
         self.assertEqual(output.read_text(), 'container output')
-        self.assertEqual((self.workspace / 'README.md').read_text(), 'readme')
+        self.assertEqual(addition.read_text(), 'new local file')
+        self.assertFalse((self.workspace / 'README.md').exists())
         self.assertFalse((self.workspace / 'log/old.log').exists())
         self.assertEqual(git(self.workspace, 'rev-parse', 'HEAD'), git(self.remote, 'rev-parse', 'HEAD'))
         self.assertEqual(git(self.workspace, 'rev-parse', '--abbrev-ref', '@{upstream}'), 'origin/main')
@@ -54,6 +57,7 @@ class ConnectTests(unittest.TestCase):
     def test_rerun_preserves_developer_branch(self):
         self.connect()
         git(self.workspace, 'switch', '-c', 'teammate-work')
+        (self.workspace / 'src').mkdir()
         (self.workspace / 'src/example.txt').write_text('new edit')
         self.connect()
         self.assertEqual(git(self.workspace, 'branch', '--show-current'), 'teammate-work')

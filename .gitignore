@@ -1,4 +1,8 @@
 # This repository includes the current build/install/log snapshot by request.
+# Fresh native builds use separate, machine-local directories.
+/.native-build/
+/.native-install/
+/.native-log/
 
 # Original upstream Git history retained locally, never uploaded.
 /.upstream-git/

@@ -14,8 +14,9 @@ src/yahboom_rosmaster/
   yahboom_rosmaster_navigation/      Navigation utilities and configurations
   ...                               Other original Yahboom support packages
 Dockerfile                          Image building the complete workspace
-compose.yaml                        Container configuration
-docker/                            Container helpers and usage instructions
+compose.yaml                        Base container configuration
+docker/compose.dev.yaml              Persistent development workspace and login
+docker/                             Container helpers, overlays and usage instructions
 ```
 
 ## Team setup with Docker
@@ -75,7 +76,9 @@ gh --version
 
 The Git origin should be
 `https://github.com/Ehzem/Haprow-uvcCleaningRobot.git`. New images initialize
-this connection automatically and include GitHub CLI. The shell prompt can
+this connection automatically and include GitHub CLI. The image uses the source
+from the local build context; opening a container does not automatically pull
+new commits from GitHub. The shell prompt can
 look similar to the host prompt; the `/.dockerenv` check confirms the container.
 
 Run the simulation check if you want to verify robot spawning, sensor topics
@@ -129,6 +132,8 @@ Review the staged summary before committing. The repository includes the host's
 `build/`, `install/`, and `log/` snapshot, while Docker generates its own outputs.
 Those differences are expected. Stage source/configuration files intentionally
 rather than using `git add .` to avoid committing generated output accidentally.
+The branch-creation command does not switch to the latest remote commit: it
+starts from the current local commit and keeps existing working-file changes.
 
 ### 7. Exit and reopen
 
@@ -155,22 +160,33 @@ source mounts, image updates and additional persistence details.
 
 ## Build and run natively
 
-Use Ubuntu 24.04 with ROS 2 Jazzy and rosdep installed. Clone this repository
-into `~/addison_ws` to support the original X3 launcher's home-relative paths.
-Install and build the source dependencies from the workspace root:
+Use Ubuntu 24.04 with ROS 2 Jazzy, colcon and rosdep installed. Clone this
+repository into `~/addison_ws`. The committed `build/` and `install/` are a host
+snapshot and can contain incompatible CMake caches and absolute links. Build
+into separate machine-local directories instead of reusing that snapshot:
 
 ```bash
+cd ~/addison_ws
 source /opt/ros/jazzy/setup.bash
+if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then
+    sudo rosdep init
+fi
 rosdep update --rosdistro jazzy
 rosdep install --from-paths src --ignore-src --rosdistro jazzy -y
-colcon build --symlink-install --executor sequential
-source install/setup.bash
+colcon --log-base .native-log build \
+  --build-base .native-build --install-base .native-install \
+  --symlink-install --executor sequential
+source .native-install/setup.bash
 ros2 launch yahboom_rosmaster_gazebo operating_theatre.launch.py
 ```
 
-The theatre launcher spawns the UVC robot. The original ROSMASTER X3 launcher
-remains available separately. See the
-[theatre documentation](src/yahboom_rosmaster/yahboom_rosmaster_gazebo/OPERATING_THEATRE.md)
+The `.native-*` directories are ignored by Git. Docker continues to use its own
+freshly compiled `build/`, `install/`, and `log/` inside the image; no host build
+products are copied into it. The theatre launch starts the UVC robot. Original
+ROSMASTER X3 launch files remain available; some retain original home-relative
+configuration paths and are separate from this UVC setup.
+
+See the [theatre documentation](src/yahboom_rosmaster/yahboom_rosmaster_gazebo/OPERATING_THEATRE.md)
 and [UVC description](src/yahboom_rosmaster/uvc_robot_description/README.md).
 
 ## Simulation scope

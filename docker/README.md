@@ -1,31 +1,46 @@
-# Docker: complete Addison workspace
+# Docker development guide
 
-The image contains Ubuntu 24.04, ROS 2 Jazzy, Gazebo Harmonic through ROS vendor
-packages, RViz, Nav2, SLAM Toolbox, robot localization, AprilTag/docking tools,
-ROS 2 control, all dependencies resolved from the workspace manifests, colcon,
-compiler tools, Python tools, keyboard teleoperation, **tmux**, and GitHub CLI (`gh`). Every source
-package is built inside the image. The host does not need ROS or Gazebo installed.
+The image builds the workspace on Ubuntu 24.04 with ROS 2 Jazzy, Gazebo Harmonic
+through ROS vendor packages, RViz, Nav2, SLAM Toolbox, localization, docking,
+ROS 2 control, tmux and GitHub CLI (`gh`). Dependency installation comes from the
+workspace package manifests. No host ROS installation is needed.
 
-The package layout is unchanged. In the container the workspace lives at
-`/home/itadmin/addison_ws`, with `uvc_robot_description` separate from the Gazebo
-package. The account is `itadmin`, by default UID/GID 1000. This home/workspace
-path also supports the original X3 launcher's existing home-relative paths.
-No host `build`, `install`, logs, credentials or original Downloads files are
-copied into the image. Converted CAD assets are already in `src`.
+For a fresh PC, start with the [main README's team setup](../README.md#team-setup-with-docker).
+The commands below assume Ubuntu 24.04 with Docker Engine and Compose installed.
+Commands using `sudo docker` run on the **host**; ROS and GitHub login commands
+labelled below run **inside the container**, without sudo.
 
-## Open the container and check you are inside
+## Build and open the development workspace
 
-Once the image is built, run these commands in your **host terminal**:
+On the host, install the required tools if necessary:
 
 ```bash
-cd /home/itadmin/addison_ws
-sudo docker compose run --rm workspace bash
+sudo apt-get update
+sudo apt-get install -y git docker.io docker-compose-v2
+sudo systemctl enable --now docker
 ```
 
-Enter your host Ubuntu password if sudo asks. This opens a normal shell inside
-the container; it does not start tmux, Gazebo or RViz.
+Clone once into an unused `~/addison_ws` directory, then build:
 
-Then run this check in the newly opened shell:
+```bash
+git clone https://github.com/Ehzem/Haprow-uvcCleaningRobot.git ~/addison_ws
+cd ~/addison_ws
+sudo env LOCAL_UID="$(id -u)" LOCAL_GID="$(id -g)" docker compose build
+```
+
+The account inside the image is always `itadmin`, with its workspace at
+`/home/itadmin/addison_ws`; the host username may be different. Build arguments
+match its UID/GID to the host user, which also supports X11 display access.
+The image tag is `addison-workspace:jazzy`.
+
+Open a normal development shell, without starting the simulation:
+
+```bash
+cd ~/addison_ws
+sudo docker compose -f compose.yaml -f docker/compose.dev.yaml run --rm workspace bash
+```
+
+Inside the container:
 
 ```bash
 if [ -f /.dockerenv ]; then
@@ -33,268 +48,262 @@ if [ -f /.dockerenv ]; then
 else
     echo "You are on the host"
 fi
-```
-
-The prompt can look the same inside and outside because the container uses the
-same username and workspace path. To see your workspace inside the container:
-
-```bash
 cd /home/itadmin/addison_ws
-ls
 ls src
-```
-
-Run `exit` to return to the host. The `--rm` option removes this temporary
-container when you exit; the built image and host workspace remain. Files edited
-only inside this temporary container are lost when it is removed.
-
-## Host setup and image build
-
-Use a Linux host with Docker Engine and the Compose v2 plugin. GUI examples are
-for an Ubuntu X11/XWayland desktop. Docker Desktop on other operating systems
-requires separate display/network configuration.
-
-On Ubuntu 24.04, one distribution-package installation option is:
-
-```bash
-sudo apt-get update
-sudo apt-get install -y docker.io docker-compose-v2
-sudo systemctl enable --now docker
-sudo docker version
-sudo docker compose version
-```
-
-Use `sudo docker` if your account does not already have Docker access. The
-commands below assume it does; replace `docker` with `sudo docker` as needed.
-
-Build from the workspace root, not the `docker` directory:
-
-```bash
-cd /home/itadmin/addison_ws
-export LOCAL_UID="$(id -u)"
-export LOCAL_GID="$(id -g)"
-docker compose build
-```
-
-`BUILD_JOBS=2` limits compiler parallelism by default. Increase it only if memory
-allows, e.g. `BUILD_JOBS=4 docker compose build`. The first build downloads several
-GB of ROS/Gazebo packages and compiles the whole workspace. Builds stop if rosdep
-or compilation fails. No packages are silently skipped. For refreshed upstream
-packages use `docker compose build --pull --no-cache`.
-
-The default image tag is `addison-workspace:jazzy`. Base-image and apt package
-versions track the Jazzy repositories; this is not a frozen dependency snapshot.
-
-## GitHub connection and team development
-
-Every image build now initializes `/home/itadmin/addison_ws` as a Git repository
-connected to `https://github.com/Ehzem/Haprow-uvcCleaningRobot.git`, with its
-`main` branch tracking `origin/main`. New containers inherit that connection.
-Git metadata is fetched from the public repository during the image build;
-host Git metadata and credentials are never copied. Source is still taken
-from the local Docker build context, so local uncommitted source changes are
-preserved and appear as working-tree differences against GitHub. Builds need
-network access to GitHub. Rebuilding an image does not change a running container.
-
-To use a fork or another branch, set `GITHUB_REPOSITORY` and `GITHUB_BRANCH`
-before `docker compose build`. Never put tokens or passwords in build arguments.
-
-### Fresh machine
-
-After installing Docker Engine and Compose, clone and build on the host:
-
-```bash
-git clone https://github.com/Ehzem/Haprow-uvcCleaningRobot.git ~/addison_ws
-cd ~/addison_ws
-sudo env LOCAL_UID="$(id -u)" LOCAL_GID="$(id -g)" docker compose build
-sudo docker compose -f compose.yaml -f docker/compose.dev.yaml run --rm workspace bash
-```
-
-The development overlay uses local named volumes for the container workspace
-and that developer's GitHub CLI login. They survive removal of a `--rm`
-container. Without the overlay, edits, commits and login inside a temporary
-container disappear when that container is removed. These volumes do not copy
-credentials into the image or share them between devices.
-
-Inside the container, verify the connection:
-
-```bash
-cd /home/itadmin/addison_ws
 git remote -v
-git branch -vv
+gh --version
 ```
 
-### Team member login and pushing
+ROS and the workspace are sourced in interactive shells, including tmux windows.
+The host `sudo` prompt uses your host Ubuntu password. The container account
+`itadmin` has no configured sudo password; run the documented ROS/Git commands
+without sudo inside it.
+Use `exit` to leave. Run the same development-shell command on the host to reopen
+that persistent workspace.
 
-A public repository allows everyone to clone/fetch; it does not grant everyone
-permission to push. The repository owner must invite each team member through
-GitHub **Settings → Collaborators**, and the member must accept. Alternatively,
-a member can push to their own fork and open a pull request.
+## What persists
 
-Each developer signs into their own GitHub account inside the container,
-without sudo. No account password or access token is bundled in the image:
+| Content | Development overlay | Base Compose without the overlay |
+| --- | --- | --- |
+| Workspace source, commits, branches, build outputs | Stored in a local named volume | Lost when the `--rm` container is removed |
+| GitHub CLI login in `~/.config/gh` | Stored in a second local named volume | Lost when the container is removed |
+| Packages installed manually with `apt` | Lost when the container is removed | Lost when the container is removed |
+| Files edited directly in the host checkout | Remain on the host; separate from the container volume | Remain on the host |
+
+Volumes use host disk space. Reopening a development container reuses the same
+volumes. The development workspace is initialized from the image only the first
+time its volume is created. Rebuilding the image does not overwrite an existing
+volume, and container edits do not automatically modify the host checkout.
+Use Git to share source changes between those copies. Do not run a volume-removal
+command until its work has been pushed or backed up.
+
+For permanent system dependencies, update the Dockerfile (or package manifests
+for ROS dependencies), rebuild the image, and start a new container. Files and
+credentials in development volumes are not copied back into the image.
+
+To inspect disk usage, run on the host:
+
+```bash
+sudo docker system df
+```
+
+For disposable testing with no persistent workspace, use this host command:
+
+```bash
+sudo docker compose run --rm workspace bash
+```
+
+## GitHub and team access
+
+At image build time, `workspace-connect-github` fetches the public repository and
+prepares the `main` branch to track `origin/main`. Host `.git` metadata and login
+credentials are not copied. Source, setup files and documentation come from the
+local build context, preserving local additions, edits and deletions. Cached
+image layers may reuse previously fetched metadata. Starting or reopening a
+container does not automatically fetch or pull new commits.
+
+The repository also tracks a host snapshot of `build/`, `install/`, and `log/`.
+Docker compiles its own outputs rather than copying those working files from the
+host, so differences in those directories are expected. The fetched Git history
+still contains the committed snapshot. Stage source/configuration files
+intentionally; `git add .` can include generated differences.
+
+Inside the container, sign in with your own account and set your commit identity:
 
 ```bash
 gh auth login --hostname github.com --git-protocol https --web
 gh auth setup-git
-git config --local user.name "Your Name"
-git config --local user.email "your-email-or-github-noreply-address"
+read -r -p "Your commit author name: " commit_author_name
+read -r -p "Your commit author email: " commit_author_email
+git config --local user.name "$commit_author_name"
+git config --local user.email "$commit_author_email"
 ```
 
-Follow the device-code browser sign-in printed by `gh`. To work on a branch:
+Follow the device-code browser sign-in. Public access permits cloning/fetching.
+Pushing to the shared repository requires a collaborator invitation from its
+owner and acceptance by the developer. A developer can instead push to their own
+fork and open a pull request. No personal account is authenticated in the image.
+
+A feature branch starts from the current local commit and retains local working
+changes; it does not automatically advance to the newest remote commit:
 
 ```bash
 git fetch origin
 git switch -c feature/your-change
-# Edit the desired source or configuration files.
+# Edit source or configuration for your task.
 git add -- src docker Dockerfile compose.yaml README.md .gitignore .dockerignore
 git diff --cached --stat
 git commit -m "Describe your change"
 git push -u origin feature/your-change
 ```
 
-This repository also tracks the host `build/`, `install/`, and `log/` snapshot.
-The container compiles its own outputs, so those directories normally differ.
-Stage the source/configuration files intentionally rather than `git add .` to
-avoid unintentionally committing generated files. Pulls that change those
-tracked generated outputs can require resolving local differences first;
-inspect them instead of discarding local work blindly.
+Use a new branch name for each task. Fetching is safe for local files; pulling or
+switching to commits that modify the tracked build snapshots can be blocked by
+container-local generated changes. Inspect and back up your work before deciding
+how to resolve them; do not discard them blindly.
 
-The development volume is initialized from the image only the first time it
-is created. Later image rebuilds do not replace an existing volume's workspace.
-Use Git to update its source and rebuild with colcon as needed. Do not remove
-the volume until you have pushed or backed up your work. Updating the image's
-system tools/dependencies still requires an image rebuild and a new container.
-
-## Terminal and tmux
-
-Open a sourced shell:
+To build against a fork or another branch, pass arguments explicitly through sudo:
 
 ```bash
-docker compose run --rm workspace
+sudo env LOCAL_UID="$(id -u)" LOCAL_GID="$(id -g)" \
+  GITHUB_REPOSITORY=https://github.com/YOUR-ACCOUNT/YOUR-FORK.git \
+  GITHUB_BRANCH=main docker compose build
 ```
 
-ROS and the workspace are sourced automatically in every interactive shell,
-including new tmux windows. To run the simulation without a desktop window:
+Replace the fork URL before running. This changes the new image's origin; it does
+not rewrite an existing development volume's Git remote. Never put tokens in
+build arguments. Running `workspace-connect-github` again preserves an existing
+repository and developer branch; it rejects a different existing origin.
+
+## Simulation with tmux
+
+For headless simulation in the persistent workspace, run on the host:
 
 ```bash
-docker compose run --rm workspace workspace-tmux --headless
+cd ~/addison_ws
+sudo docker compose -f compose.yaml -f docker/compose.dev.yaml run --rm workspace workspace-tmux --headless
 ```
 
-This creates a `theatre` tmux session with three windows: `simulation`, `terminal`,
-and `teleop`. The headless session uses Xvfb when no display is available, so
-Gazebo's lidar still has a rendering context. Switch windows with Ctrl+B then
-0/1/2; detach with Ctrl+B then D. A foreground `docker compose run --rm` container
-ends after its main process exits, so use a persistent container for detach/reattach:
-
-```bash
-docker compose up -d workspace
-docker compose exec workspace bash
-# Inside the container:
-workspace-tmux --headless
-# Detach from tmux, then leave the shell with exit.
-# Later, reattach from the host:
-docker compose exec workspace bash -ic 'tmux attach -t theatre'
-# Stop the persistent container:
-docker compose down
-```
-
-To use keyboard control, select the teleop window and run:
+This opens tmux windows `0:simulation`, `1:terminal` and `2:teleop`. Switch with
+Ctrl+B, release, then press 0/1/2. If no display is available, the helper uses
+Xvfb and software rendering so lidar can run. In the teleop window:
 
 ```bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
-The UVC model uses ordinary Twist messages on `/cmd_vel`. Send an explicit stop
-when finished: `ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist '{}'`.
+The robot accepts ordinary Twist messages on `/cmd_vel`. Explicitly stop it when
+finished:
+
+```bash
+ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist '{}'
+```
+
+Detaching from tmux ends a foreground `run --rm` container once its main process
+exits; the development volumes retain files, not running processes. To keep the
+simulation running after detaching, use a background service on the host:
+
+```bash
+sudo docker compose -f compose.yaml -f docker/compose.dev.yaml up -d workspace
+sudo docker compose -f compose.yaml -f docker/compose.dev.yaml exec workspace bash
+```
+
+Inside that shell, run `workspace-tmux --headless`, then detach with Ctrl+B, D.
+To reattach or stop the service, run on the host:
+
+```bash
+sudo docker compose -f compose.yaml -f docker/compose.dev.yaml exec workspace bash -ic 'tmux attach -t theatre'
+# Stop the service while retaining its development volumes:
+sudo docker compose -f compose.yaml -f docker/compose.dev.yaml down
+```
 
 ## Gazebo and RViz windows
 
-The default GUI overlay uses Mesa software rendering, which works without a GPU
-passthrough configuration but can be slower. First allow only your local desktop
-user to access X11; the image user must have your host UID, as set during build:
+These examples require an X11/XWayland desktop. For the optional `xhost` command,
+install `x11-xserver-utils` on the host if necessary. Grant access only to the
+local desktop user whose UID matches the image user:
 
 ```bash
 xhost +si:localuser:"$(id -un)"
-docker compose -f compose.yaml -f docker/compose.gui.yaml run --rm workspace workspace-tmux
+sudo env DISPLAY="$DISPLAY" docker compose \
+  -f compose.yaml -f docker/compose.dev.yaml -f docker/compose.gui.yaml \
+  run --rm workspace workspace-tmux
 ```
 
-After the GUI container exits, revoke that local-user display grant:
+After the GUI container exits:
 
 ```bash
 xhost -si:localuser:"$(id -un)"
 ```
 
-If using `sudo docker`, preserve the desktop `DISPLAY`, for example:
+The GUI overlay defaults to software rendering. It mounts the host display
+socket; the development overlay additionally mounts its two named volumes.
+The host home directory and Docker socket are not mounted, and privileged mode
+is not used.
+
+For Intel/AMD acceleration, `/dev/dri` must exist and the user needs the group IDs
+that grant access to its device nodes. On systems with `video` and `render`
+groups, run on the host:
 
 ```bash
-sudo env DISPLAY="$DISPLAY" docker compose -f compose.yaml -f docker/compose.gui.yaml run --rm workspace workspace-tmux
+sudo env DISPLAY="$DISPLAY" \
+  VIDEO_GID="$(getent group video | cut -d: -f3)" \
+  RENDER_GID="$(getent group render | cut -d: -f3)" \
+  docker compose -f compose.yaml -f docker/compose.dev.yaml \
+  -f docker/compose.gui.yaml -f docker/compose.dri.yaml run --rm workspace workspace-tmux
 ```
 
-Only `/tmp/.X11-unix` is mounted. Host home directories and the Docker socket are
-not mounted, and privileged mode is not used.
-
-For Intel/AMD graphics, when `/dev/dri` exists, add the optional DRI overlay:
+For NVIDIA, the host must have the NVIDIA driver and NVIDIA Container Toolkit
+configured for Docker. With the same X11 grant:
 
 ```bash
-export VIDEO_GID="$(getent group video | cut -d: -f3)"
-export RENDER_GID="$(getent group render | cut -d: -f3)"
-docker compose -f compose.yaml -f docker/compose.gui.yaml -f docker/compose.dri.yaml run --rm workspace workspace-tmux
+sudo env DISPLAY="$DISPLAY" docker compose \
+  -f compose.yaml -f docker/compose.dev.yaml -f docker/compose.gui.yaml \
+  -f docker/compose.nvidia.yaml run --rm workspace workspace-tmux
 ```
 
-For NVIDIA, install the host driver and NVIDIA Container Toolkit first, configure
-the Docker runtime, and use the GPU overlay:
+## Validation and image updates
+
+The build runs dependency checks, compiles all packages, installs tmux/GitHub CLI
+and initializes Git. Test the baked image without a desktop or GPU:
 
 ```bash
-docker compose -f compose.yaml -f docker/compose.gui.yaml -f docker/compose.nvidia.yaml run --rm workspace workspace-tmux
+sudo docker compose run --rm -T workspace workspace-smoke-test
 ```
 
-## Validation
-
-The image build runs rosdep dependency checks, builds all packages and verifies
-that the UVC/Gazebo packages and tmux are installed. Run the included simulation
-check without a desktop or GPU:
+To test the current persistent development workspace instead:
 
 ```bash
-docker compose run --rm workspace workspace-smoke-test
+sudo docker compose -f compose.yaml -f docker/compose.dev.yaml run --rm -T workspace workspace-smoke-test
 ```
 
-It uses a virtual X server and software rendering, launches the theatre and CAD
-robot, waits for odometry, wheel states, lidar and IMU, commands a short forward
-motion, stops the robot and checks that Gazebo contains it. It prints `PASS` or
-exits nonzero. The simulation log is `/tmp/addison-smoke-test.log` inside the
-container; omit `--rm` if you want to inspect a failed container afterward.
+The smoke test uses a virtual X server/software rendering, a separate ROS domain
+(default 79, configurable with `SMOKE_ROS_DOMAIN_ID`) and a unique Gazebo partition.
+It waits for odometry, wheel states, lidar and IMU, commands short forward motion,
+stops the robot and checks its Gazebo presence. It prints `"result": "PASS"` or
+exits nonzero. Its log is `/tmp/addison-smoke-test.log` inside that container.
+Omit `--rm` when investigating a failure so you can inspect the stopped container.
 
-## Source changes and persistence
-
-Source is baked into the image. After editing host files, rebuild with
-`docker compose build`. Host edits are not automatically reflected in containers.
-To experiment with host source mounted inside a container:
+To change compiler parallelism or refresh upstream packages, run on the host:
 
 ```bash
-docker compose run --rm \
+sudo env LOCAL_UID="$(id -u)" LOCAL_GID="$(id -g)" BUILD_JOBS=4 docker compose build
+# Refresh the base image and rerun all installation/build steps:
+sudo env LOCAL_UID="$(id -u)" LOCAL_GID="$(id -g)" docker compose build --pull --no-cache
+```
+
+Default build parallelism is two jobs. Larger values need more RAM. The image
+tracks Jazzy apt repositories rather than a frozen set of package versions.
+
+Source is baked into new images. An existing development volume retains its own
+source and build outputs. After updating that source through Git, rebuild it
+inside the container with `colcon build --symlink-install --executor sequential`,
+then `source install/setup.bash`. For native host builds, use the separate
+`.native-*` directories documented in the main README.
+
+For live editing of only the host's source without a development volume, this
+optional host command mounts `src/` into a temporary container:
+
+```bash
+sudo docker compose run --rm \
   --volume "$PWD/src:/home/itadmin/addison_ws/src" workspace bash
-# Inside the container:
-colcon build --symlink-install --executor sequential
-source install/setup.bash
 ```
 
-Changes to mounted source persist on the host. Rebuilt install files and other
-container-only changes disappear when a `--rm` container exits. Avoid mounting
-host `build` or `install`; rebuilds should use the container's ROS/compiler stack.
+Rebuild inside that container after source changes. Source edits persist on the
+host, while its temporary build/install products and Git commits do not. Do not
+mount host `build/` or `install/` over the image's generated outputs.
 
-ROS networking defaults to domain 42 and Gazebo partition `addison_docker`, using
-Linux host networking. Change `ROS_DOMAIN_ID`/`GZ_PARTITION` in the environment
-when you deliberately want to connect other processes. The default separate
-ROS domain avoids mixing with a host simulation on domain 0. Cyclone DDS avoids
-requiring shared host IPC for DDS discovery/data transport.
+Normal development networking defaults to ROS domain 42, Gazebo partition
+`addison_docker` and Linux host networking with Cyclone DDS. Other processes must
+use compatible settings to communicate. When using sudo, pass custom Compose
+settings via `sudo env NAME=value docker compose ...` so they reach Compose.
 
-This environment supplies navigation dependencies; it does not create a theatre
-map or configure UVC autonomous navigation. Those remain separate tasks.
+The environment supplies navigation dependencies. It does not create a theatre
+map, configure UVC Nav2 or model UV dose/disinfection physics.
 
 ## References
 
-- [Official ROS Docker image and Jazzy tags](https://hub.docker.com/_/ros)
-- [ROS/Gazebo version pairing and installation](https://gazebosim.org/docs/harmonic/ros_installation/)
-- [Docker Engine installation on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-- [Docker Compose GPU configuration](https://docs.docker.com/compose/how-tos/gpu-support/)
+- [Official ROS Docker images](https://hub.docker.com/_/ros)
+- [ROS/Gazebo version pairing](https://gazebosim.org/docs/harmonic/ros_installation/)
+- [Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+- [GitHub collaborator access](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/permission-levels-for-a-personal-account-repository)

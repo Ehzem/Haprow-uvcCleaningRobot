@@ -35,18 +35,8 @@ def connect(workspace, repository, branch):
     git('update-ref', f'refs/heads/{branch}', remote_ref)
     git('read-tree', 'HEAD')
     git('branch', f'--set-upstream-to=origin/{branch}', branch)
-    files = git('ls-files', '-z', capture_output=True).stdout.split(b'\0')
-    missing = []
-    for filename in files:
-        if not filename:
-            continue
-        name = os.fsdecode(filename)
-        if name.startswith(('build/', 'install/', 'log/')):
-            continue
-        if not os.path.lexists(root / name):
-            missing.append(filename)
-    if missing:
-        git('checkout-index', '--stdin', '-z', input=b'\0'.join(missing) + b'\0')
+    # Docker already copies source and setup files from the build context.
+    # Leave missing tracked files missing: they may be deliberate local deletes.
     print(f'Connected {root} to {repository} on {branch}; existing files preserved.')
 
 
