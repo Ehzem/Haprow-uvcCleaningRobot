@@ -6,18 +6,54 @@ robot simulation, odometry, lidar and IMU, plus a Docker environment with tmux.
 
 ## Workspace layout
 
+The GitHub repository root represents `addison_ws` itself. The tracked layout is:
+
 ```text
-src/yahboom_rosmaster/
-  uvc_robot_description/             Robot URDF, meshes, visualization launch
-  yahboom_rosmaster_gazebo/          Worlds, environment models, simulation bridge
-  yahboom_rosmaster_bringup/         Existing ROSMASTER launch files
-  yahboom_rosmaster_navigation/      Navigation utilities and configurations
-  ...                               Other original Yahboom support packages
-Dockerfile                          Image building the complete workspace
-compose.yaml                        Base container configuration
-docker/compose.dev.yaml              Persistent development workspace and login
-docker/                             Container helpers, overlays and usage instructions
+addison_ws/
+├── .dockerignore                      Docker build-context exclusions
+├── .gitignore                         Local/credential exclusions
+├── Dockerfile                         Workspace image definition
+├── README.md                          This guide
+├── compose.yaml                       Base container configuration
+├── build/                             Uploaded host build snapshot
+├── install/                           Uploaded host install snapshot
+├── log/                               Uploaded host colcon logs
+├── docker/
+│   ├── README.md                      Detailed Docker guide
+│   ├── compose.dev.yaml                Persistent workspace/login volumes
+│   ├── compose.dri.yaml                Intel/AMD GPU overlay
+│   ├── compose.gui.yaml                X11 GUI overlay
+│   ├── compose.nvidia.yaml             NVIDIA GPU overlay
+│   ├── connect-github.py               Git connection helper
+│   ├── entrypoint.sh                   Container entrypoint
+│   ├── environment.bash                ROS/workspace environment
+│   ├── smoke-test.py                   Simulation verification
+│   ├── smoke-test.sh                   Isolated smoke-test launcher
+│   ├── tests/
+│   │   └── test_connect_github.py      Git connection regression tests
+│   └── tmux.sh                        Simulation/terminal tmux session
+└── src/
+    └── yahboom_rosmaster/
+        ├── README.md                  Source-package overview
+        ├── mecanum_drive_controller/
+        ├── uvc_robot_description/     UVC URDF, meshes, launch and RViz
+        ├── yahboom_rosmaster/          Original ROSMASTER metapackage
+        ├── yahboom_rosmaster_bringup/
+        ├── yahboom_rosmaster_description/
+        ├── yahboom_rosmaster_docking/
+        ├── yahboom_rosmaster_gazebo/   Theatre world, models and ROS bridge
+        ├── yahboom_rosmaster_localization/
+        ├── yahboom_rosmaster_msgs/
+        ├── yahboom_rosmaster_navigation/
+        └── yahboom_rosmaster_system_tests/
 ```
+
+`build/`, `install/`, and `log/` are included on GitHub as the requested host
+snapshot. Docker builds fresh outputs instead of copying those working files.
+Machine-local `.native-build/`, `.native-install/`, and `.native-log/` are ignored,
+as are credentials and the local `.upstream-git/` backup. They are not part of
+the uploaded layout. Docker images, containers and volumes are stored separately
+by Docker, not as directories in this repository.
 
 ## Team setup with Docker
 
