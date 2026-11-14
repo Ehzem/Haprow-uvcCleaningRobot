@@ -67,5 +67,21 @@ RUN source /opt/ros/jazzy/setup.bash \
     && ros2 pkg prefix yahboom_rosmaster_gazebo \
     && tmux -V
 
+# Add GitHub support after compilation so existing ROS build layers stay cached.
+USER root
+RUN apt-get update && apt-get install -y --no-install-recommends gh \
+    && rm -rf /var/lib/apt/lists/*
+COPY docker/connect-github.py /usr/local/bin/workspace-connect-github
+RUN chmod +x /usr/local/bin/workspace-connect-github
+COPY --chown=itadmin:itadmin .gitignore .dockerignore Dockerfile compose.yaml README.md ./
+COPY --chown=itadmin:itadmin docker/ ./docker/
+USER itadmin
+ARG GITHUB_REPOSITORY=https://github.com/Ehzem/Haprow-uvcCleaningRobot.git
+ARG GITHUB_BRANCH=main
+RUN mkdir -p /home/itadmin/.config/gh \
+    && workspace-connect-github --repository "${GITHUB_REPOSITORY}" --branch "${GITHUB_BRANCH}" \
+    && git config --global credential.https://github.com.helper '!gh auth git-credential' \
+    && gh --version
+
 ENTRYPOINT ["/usr/bin/tini", "--", "/usr/local/bin/workspace-entrypoint"]
 CMD ["bash"]

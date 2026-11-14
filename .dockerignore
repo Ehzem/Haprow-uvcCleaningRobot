@@ -1,6 +1,10 @@
 # Only source and container setup belong in the image.
 **
 !Dockerfile
+!.gitignore
+!.dockerignore
+!README.md
+!compose.yaml
 !src/
 !src/**
 !docker/

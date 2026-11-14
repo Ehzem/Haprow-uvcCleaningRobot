@@ -3,7 +3,7 @@
 The image contains Ubuntu 24.04, ROS 2 Jazzy, Gazebo Harmonic through ROS vendor
 packages, RViz, Nav2, SLAM Toolbox, robot localization, AprilTag/docking tools,
 ROS 2 control, all dependencies resolved from the workspace manifests, colcon,
-compiler tools, Python tools, keyboard teleoperation, and **tmux**. Every source
+compiler tools, Python tools, keyboard teleoperation, **tmux**, and GitHub CLI (`gh`). Every source
 package is built inside the image. The host does not need ROS or Gazebo installed.
 
 The package layout is unchanged. In the container the workspace lives at
@@ -84,6 +84,87 @@ packages use `docker compose build --pull --no-cache`.
 
 The default image tag is `addison-workspace:jazzy`. Base-image and apt package
 versions track the Jazzy repositories; this is not a frozen dependency snapshot.
+
+## GitHub connection and team development
+
+Every image build now initializes `/home/itadmin/addison_ws` as a Git repository
+connected to `https://github.com/Ehzem/Haprow-uvcCleaningRobot.git`, with its
+`main` branch tracking `origin/main`. New containers inherit that connection.
+Git metadata is fetched from the public repository during the image build;
+host Git metadata and credentials are never copied. Source is still taken
+from the local Docker build context, so local uncommitted source changes are
+preserved and appear as working-tree differences against GitHub. Builds need
+network access to GitHub. Rebuilding an image does not change a running container.
+
+To use a fork or another branch, set `GITHUB_REPOSITORY` and `GITHUB_BRANCH`
+before `docker compose build`. Never put tokens or passwords in build arguments.
+
+### Fresh machine
+
+After installing Docker Engine and Compose, clone and build on the host:
+
+```bash
+git clone https://github.com/Ehzem/Haprow-uvcCleaningRobot.git ~/addison_ws
+cd ~/addison_ws
+sudo env LOCAL_UID="$(id -u)" LOCAL_GID="$(id -g)" docker compose build
+sudo docker compose -f compose.yaml -f docker/compose.dev.yaml run --rm workspace bash
+```
+
+The development overlay uses local named volumes for the container workspace
+and that developer's GitHub CLI login. They survive removal of a `--rm`
+container. Without the overlay, edits, commits and login inside a temporary
+container disappear when that container is removed. These volumes do not copy
+credentials into the image or share them between devices.
+
+Inside the container, verify the connection:
+
+```bash
+cd /home/itadmin/addison_ws
+git remote -v
+git branch -vv
+```
+
+### Team member login and pushing
+
+A public repository allows everyone to clone/fetch; it does not grant everyone
+permission to push. The repository owner must invite each team member through
+GitHub **Settings → Collaborators**, and the member must accept. Alternatively,
+a member can push to their own fork and open a pull request.
+
+Each developer signs into their own GitHub account inside the container,
+without sudo. No account password or access token is bundled in the image:
+
+```bash
+gh auth login --hostname github.com --git-protocol https --web
+gh auth setup-git
+git config --local user.name "Your Name"
+git config --local user.email "your-email-or-github-noreply-address"
+```
+
+Follow the device-code browser sign-in printed by `gh`. To work on a branch:
+
+```bash
+git fetch origin
+git switch -c feature/your-change
+# Edit the desired source or configuration files.
+git add -- src docker Dockerfile compose.yaml README.md .gitignore .dockerignore
+git diff --cached --stat
+git commit -m "Describe your change"
+git push -u origin feature/your-change
+```
+
+This repository also tracks the host `build/`, `install/`, and `log/` snapshot.
+The container compiles its own outputs, so those directories normally differ.
+Stage the source/configuration files intentionally rather than `git add .` to
+avoid unintentionally committing generated files. Pulls that change those
+tracked generated outputs can require resolving local differences first;
+inspect them instead of discarding local work blindly.
+
+The development volume is initialized from the image only the first time it
+is created. Later image rebuilds do not replace an existing volume's workspace.
+Use Git to update its source and rebuild with colcon as needed. Do not remove
+the volume until you have pushed or backed up your work. Updating the image's
+system tools/dependencies still requires an image rebuild and a new container.
 
 ## Terminal and tmux
 

@@ -35,7 +35,10 @@ ls /home/itadmin/addison_ws/src
 ```
 
 See [Docker instructions](docker/README.md) for GUI access, tmux, GPU options,
-source mounts, persistence and the simulation smoke test.
+source mounts, persistence, team GitHub login/pushing, and the simulation smoke test.
+New images include GitHub CLI and initialize the repository connection automatically;
+each developer still authenticates with their own account and needs repository
+write access (or uses a fork) to push.
 
 ## Build and run natively
 

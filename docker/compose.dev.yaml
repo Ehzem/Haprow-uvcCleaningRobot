@@ -1,0 +1,10 @@
+# Recommended for team development: files and each developer's GitHub login
+# survive container removal. These local volumes are not included in the image.
+services:
+  workspace:
+    volumes:
+      - developer_workspace:/home/itadmin/addison_ws
+      - github_login:/home/itadmin/.config/gh
+volumes:
+  developer_workspace:
+  github_login:
