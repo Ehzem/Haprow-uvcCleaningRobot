@@ -18,27 +18,140 @@ compose.yaml                        Container configuration
 docker/                            Container helpers and usage instructions
 ```
 
-## Run with Docker
+## Team setup with Docker
 
-Docker Engine and Compose must be installed on the host. From this directory:
+These steps are for a fresh **Ubuntu 24.04** PC. ROS and Gazebo do not need to
+be installed on the host; the Docker image supplies them. Commands are marked
+as **host terminal** or **inside Docker** so you know where to run them.
+
+### 1. Install Docker and Git — host terminal
 
 ```bash
+sudo apt-get update
+sudo apt-get install -y git docker.io docker-compose-v2
+sudo systemctl enable --now docker
+```
+
+### 2. Clone the public repository and build — host terminal
+
+```bash
+git clone https://github.com/Ehzem/Haprow-uvcCleaningRobot.git ~/addison_ws
+cd ~/addison_ws
+
 sudo env LOCAL_UID="$(id -u)" LOCAL_GID="$(id -g)" docker compose build
-sudo docker compose run --rm workspace bash
 ```
 
-Inside the container, confirm where you are and list the source:
+The first build downloads the dependencies and compiles the workspace. No
+GitHub login is needed to clone this public repository or build the image.
+
+### 3. Open the development container — host terminal
 
 ```bash
-test -f /.dockerenv && echo 'You are inside Docker'
-ls /home/itadmin/addison_ws/src
+cd ~/addison_ws
+sudo docker compose -f compose.yaml -f docker/compose.dev.yaml run --rm workspace bash
 ```
+
+This opens a normal shell without automatically starting tmux, Gazebo or RViz.
+The development configuration preserves the container workspace and GitHub CLI
+login in local Docker volumes between sessions. These volumes use host disk
+space and are separate from the host's `~/addison_ws` checkout. Reopening uses
+the same volumes rather than making another workspace copy.
+
+System packages installed manually with `apt` inside a temporary container
+are not in these volumes. Add permanent package dependencies to the Dockerfile
+and rebuild the image. Do not remove the development volumes until their work
+has been pushed or backed up.
+
+### 4. Verify the workspace — inside Docker
+
+```bash
+test -f /.dockerenv && echo "You are inside Docker"
+
+cd /home/itadmin/addison_ws
+ls src
+git remote -v
+gh --version
+```
+
+The Git origin should be
+`https://github.com/Ehzem/Haprow-uvcCleaningRobot.git`. New images initialize
+this connection automatically and include GitHub CLI. The shell prompt can
+look similar to the host prompt; the `/.dockerenv` check confirms the container.
+
+Run the simulation check if you want to verify robot spawning, sensor topics
+and forward motion without opening desktop windows:
+
+```bash
+workspace-smoke-test
+```
+
+A successful check prints `"result": "PASS"`.
+
+### 5. Sign in to push changes — inside Docker
+
+Before a teammate can push to this repository, the owner must invite them
+through **GitHub repository → Settings → Collaborators**, and they must accept.
+Public access allows cloning and fetching, but does not grant push permission.
+Alternatively, a teammate can push to their own fork and open a pull request.
+
+Each teammate signs in with their own account. Run these commands **without
+sudo** inside Docker, and follow the device-code browser login instructions:
+
+```bash
+gh auth login --hostname github.com --git-protocol https --web
+gh auth setup-git
+
+read -r -p "Your commit author name: " commit_author_name
+read -r -p "Your commit author email: " commit_author_email
+
+git config --local user.name "$commit_author_name"
+git config --local user.email "$commit_author_email"
+```
+
+The author email can be a GitHub noreply address. No GitHub login or credentials
+are bundled in the image or shared automatically between teammates.
+
+### 6. Create a branch, edit and push — inside Docker
+
+Choose a new branch name for each task; `feature/my-change` is an example:
+
+```bash
+git switch -c feature/my-change
+
+# Edit the source or configuration files for your task.
+git add src docker Dockerfile compose.yaml README.md .gitignore .dockerignore
+git diff --cached --stat
+git commit -m "Describe the changes"
+git push -u origin feature/my-change
+```
+
+Review the staged summary before committing. The repository includes the host's
+`build/`, `install/`, and `log/` snapshot, while Docker generates its own outputs.
+Those differences are expected. Stage source/configuration files intentionally
+rather than using `git add .` to avoid committing generated output accidentally.
+
+### 7. Exit and reopen
+
+To return to the host, run **inside Docker**:
+
+```bash
+exit
+```
+
+To reopen the same persistent workspace later, run in the **host terminal**:
+
+```bash
+cd ~/addison_ws
+sudo docker compose -f compose.yaml -f docker/compose.dev.yaml run --rm workspace bash
+```
+
+The existing development volume keeps its files, commits and branch. Image
+rebuilds do not overwrite an existing volume's workspace; use Git to update its
+source and rebuild it with colcon as needed. Keep source changes synchronized
+between the separate host and container checkouts through GitHub.
 
 See [Docker instructions](docker/README.md) for GUI access, tmux, GPU options,
-source mounts, persistence, team GitHub login/pushing, and the simulation smoke test.
-New images include GitHub CLI and initialize the repository connection automatically;
-each developer still authenticates with their own account and needs repository
-write access (or uses a fork) to push.
+source mounts, image updates and additional persistence details.
 
 ## Build and run natively
 
