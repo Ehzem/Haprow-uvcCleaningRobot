@@ -279,7 +279,7 @@ Source is baked into new images. An existing development volume retains its own
 source and build outputs. After updating that source through Git, rebuild it
 inside the container with `colcon build --symlink-install --executor sequential`,
 then `source install/setup.bash`. For native host builds, use the separate
-`.native-*` directories documented in the main README.
+`.native-*` directories documented in [Native host build](#native-host-build).
 
 For live editing of only the host's source without a development volume, this
 optional host command mounts `src/` into a temporary container:
@@ -300,6 +300,37 @@ settings via `sudo env NAME=value docker compose ...` so they reach Compose.
 
 The environment supplies navigation dependencies. It does not create a theatre
 map, configure UVC Nav2 or model UV dose/disinfection physics.
+
+## Native host build
+
+Use Ubuntu 24.04 with ROS 2 Jazzy, colcon and rosdep installed. Clone this
+repository into `~/addison_ws`. The committed `build/` and `install/` are a host
+snapshot and can contain incompatible CMake caches and absolute links. Build
+into separate machine-local directories instead of reusing that snapshot:
+
+```bash
+cd ~/addison_ws
+source /opt/ros/jazzy/setup.bash
+if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then
+    sudo rosdep init
+fi
+rosdep update --rosdistro jazzy
+rosdep install --from-paths src --ignore-src --rosdistro jazzy -y
+colcon --log-base .native-log build \
+  --build-base .native-build --install-base .native-install \
+  --symlink-install --executor sequential
+source .native-install/setup.bash
+ros2 launch yahboom_rosmaster_gazebo operating_theatre.launch.py
+```
+
+The `.native-*` directories are ignored by Git. Docker continues to use its own
+freshly compiled `build/`, `install/`, and `log/` inside the image; no host build
+products are copied into it. The theatre launch starts the UVC robot. Original
+ROSMASTER X3 launch files remain available; some retain original home-relative
+configuration paths and are separate from this UVC setup.
+
+See the [theatre documentation](../src/yahboom_rosmaster/yahboom_rosmaster_gazebo/OPERATING_THEATRE.md)
+and [UVC description](../src/yahboom_rosmaster/uvc_robot_description/README.md).
 
 ## References
 

@@ -194,36 +194,64 @@ between the separate host and container checkouts through GitHub.
 See [Docker instructions](docker/README.md) for GUI access, tmux, GPU options,
 source mounts, image updates and additional persistence details.
 
-## Build and run natively
+## Run the operating theatre and RViz inside Docker
 
-Use Ubuntu 24.04 with ROS 2 Jazzy, colcon and rosdep installed. Clone this
-repository into `~/addison_ws`. The committed `build/` and `install/` are a host
-snapshot and can contain incompatible CMake caches and absolute links. Build
-into separate machine-local directories instead of reusing that snapshot:
+These commands assume the image has already been built and you are using an
+Ubuntu X11/XWayland desktop. Gazebo shows the operating theatre with the UVC
+robot; RViz shows the robot and its live laser scan. A theatre occupancy map is
+not included in RViz yet.
+
+### 1. Open a GUI-enabled container — host terminal
+
+If you are already inside a shell opened without the GUI overlay, run `exit`
+first. Reopen with both the development and GUI configurations:
 
 ```bash
 cd ~/addison_ws
-source /opt/ros/jazzy/setup.bash
-if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then
-    sudo rosdep init
-fi
-rosdep update --rosdistro jazzy
-rosdep install --from-paths src --ignore-src --rosdistro jazzy -y
-colcon --log-base .native-log build \
-  --build-base .native-build --install-base .native-install \
-  --symlink-install --executor sequential
-source .native-install/setup.bash
-ros2 launch yahboom_rosmaster_gazebo operating_theatre.launch.py
+# If xhost is missing: sudo apt-get install -y x11-xserver-utils
+xhost +si:localuser:"$(id -un)"
+sudo env DISPLAY="$DISPLAY" docker compose \
+  -f compose.yaml -f docker/compose.dev.yaml -f docker/compose.gui.yaml \
+  run --rm workspace bash
 ```
 
-The `.native-*` directories are ignored by Git. Docker continues to use its own
-freshly compiled `build/`, `install/`, and `log/` inside the image; no host build
-products are copied into it. The theatre launch starts the UVC robot. Original
-ROSMASTER X3 launch files remain available; some retain original home-relative
-configuration paths and are separate from this UVC setup.
+This reuses the persistent development workspace and enables desktop windows.
+The default GUI configuration uses software rendering, so a GPU setup is not
+required. See the [Docker guide](docker/README.md#gazebo-and-rviz-windows) for
+optional hardware acceleration.
 
+### 2. Start Gazebo, the UVC robot and RViz — inside Docker
+
+```bash
+cd /home/itadmin/addison_ws
+source /opt/ros/jazzy/setup.bash
+source install/setup.bash
+ros2 launch yahboom_rosmaster_gazebo operating_theatre.launch.py \
+  headless:=false use_rviz:=true
+```
+
+Gazebo and RViz open as separate windows. The theatre launcher spawns the UVC
+robot, publishes its transforms, and starts the simulation/ROS bridges.
+
+### 3. Stop and return to the host
+
+Press **Ctrl+C** in the launch terminal, then run inside Docker:
+
+```bash
+exit
+```
+
+After returning to the host terminal, revoke the display-access grant:
+
+```bash
+xhost -si:localuser:"$(id -un)"
+```
+
+For running directly on Ubuntu without Docker, use the separate
+[native host build guide](docker/README.md#native-host-build).
 See the [theatre documentation](src/yahboom_rosmaster/yahboom_rosmaster_gazebo/OPERATING_THEATRE.md)
-and [UVC description](src/yahboom_rosmaster/uvc_robot_description/README.md).
+and [UVC description](src/yahboom_rosmaster/uvc_robot_description/README.md)
+for robot details and driving commands.
 
 ## Simulation scope
 

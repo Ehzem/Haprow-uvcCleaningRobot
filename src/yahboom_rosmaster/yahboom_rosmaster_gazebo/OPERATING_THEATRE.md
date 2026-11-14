@@ -1,6 +1,6 @@
 # Operating theatre with UVC robot
 
-For a native host run, first follow the [main README native-build steps](../../../README.md#build-and-run-natively),
+For a native host run, first follow the [native host build steps](../../../docker/README.md#native-host-build),
 then launch from a desktop terminal:
 
 ```bash

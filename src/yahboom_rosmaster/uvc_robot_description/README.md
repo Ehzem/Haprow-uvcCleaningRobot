@@ -12,7 +12,7 @@ The theatre world, environment meshes, ROS–Gazebo bridge and simulation launch
 remain in `yahboom_rosmaster_gazebo`.
 
 First build/source the native workspace using the
-[main README](../../../README.md#build-and-run-natively), or open the Docker
+[main README](../../../docker/README.md#native-host-build), or open the Docker
 development shell, which sources its environment automatically.
 Start the simulation using:
 
