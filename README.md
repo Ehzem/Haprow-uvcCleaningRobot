@@ -163,7 +163,7 @@ spaces; use names such as `sensor-update` or `feature/navigation`.
 **Create your branch, work, commit and push it:**
 
 ```bash
-git checkout -b "branch-name"
+git checkout -b <branch-name>
 
 # Make your changes, then review what you are about to commit.
 git status
