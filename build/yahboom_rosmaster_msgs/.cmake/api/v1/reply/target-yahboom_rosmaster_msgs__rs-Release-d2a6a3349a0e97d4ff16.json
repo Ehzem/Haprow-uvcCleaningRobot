@@ -1,0 +1,73 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"/home/itadmin/addison_ws/build/yahboom_rosmaster_msgs/yahboom_rosmaster_msgs__rs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 0
+			}
+		]
+	},
+	"id" : "yahboom_rosmaster_msgs__rs::@eec92d9cbd583c38b066",
+	"name" : "yahboom_rosmaster_msgs__rs",
+	"paths" : 
+	{
+		"build" : "yahboom_rosmaster_msgs__rs",
+		"source" : "/home/itadmin/addison_ws/build/yahboom_rosmaster_msgs/yahboom_rosmaster_msgs__rs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "/home/itadmin/addison_ws/build/yahboom_rosmaster_msgs/yahboom_rosmaster_msgs__rs/CMakeFiles/yahboom_rosmaster_msgs__rs",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/itadmin/addison_ws/build/yahboom_rosmaster_msgs/yahboom_rosmaster_msgs__rs/CMakeFiles/yahboom_rosmaster_msgs__rs.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/itadmin/addison_ws/build/yahboom_rosmaster_msgs/rosidl_generator_rs/yahboom_rosmaster_msgs/rust/src/lib.rs.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

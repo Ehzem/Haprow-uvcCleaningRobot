@@ -1,0 +1,1 @@
+/home/itadmin/addison_ws/build/yahboom_rosmaster_msgs/rosidl_generator_c/yahboom_rosmaster_msgs/srv/detail/set_cleaning_state__struct.h

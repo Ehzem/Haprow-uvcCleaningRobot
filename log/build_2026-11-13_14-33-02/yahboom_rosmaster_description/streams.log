@@ -1,0 +1,70 @@
+[0.006s] Invoking command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/itadmin/addison_ws/src/yahboom_rosmaster/yahboom_rosmaster_description -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/itadmin/addison_ws/install/yahboom_rosmaster_description
+[0.076s] -- The C compiler identification is GNU 13.3.0
+[0.141s] -- The CXX compiler identification is GNU 13.3.0
+[0.173s] -- Detecting C compiler ABI info
+[0.342s] -- Detecting C compiler ABI info - done
+[0.356s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.356s] -- Detecting C compile features
+[0.357s] -- Detecting C compile features - done
+[0.368s] -- Detecting CXX compiler ABI info
+[0.505s] -- Detecting CXX compiler ABI info - done
+[0.512s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.513s] -- Detecting CXX compile features
+[0.513s] -- Detecting CXX compile features - done
+[0.519s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.651s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.709s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.755s] -- Found urdf_tutorial: 1.1.0 (/opt/ros/jazzy/share/urdf_tutorial/cmake)
+[0.757s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.847s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.847s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.848s] -- Added test 'lint_cmake' to check CMake code style
+[0.848s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.851s] -- Added test 'xmllint' to check XML markup files
+[0.852s] -- Configuring done (0.8s)
+[0.854s] -- Generating done (0.0s)
+[0.855s] -- Build files have been written to: /home/itadmin/addison_ws/build/yahboom_rosmaster_description
+[0.858s] Invoked command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/itadmin/addison_ws/src/yahboom_rosmaster/yahboom_rosmaster_description -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/itadmin/addison_ws/install/yahboom_rosmaster_description
+[0.858s] Invoking command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/itadmin/addison_ws/build/yahboom_rosmaster_description
+[0.910s] Invoked command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/itadmin/addison_ws/build/yahboom_rosmaster_description
+[0.911s] Invoking command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/itadmin/addison_ws/build/yahboom_rosmaster_description
+[0.922s] -- Install configuration: "Release"
+[0.922s] -- Execute custom install script
+[0.923s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/config/rosmaster_x3/ros2_controllers.yaml
+[0.936s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/config/rosmaster_x3/ros2_controllers_template.yaml
+[0.955s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/launch/robot_state_publisher.launch.py
+[0.973s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/meshes/intel_realsense/visual/d435.stl
+[0.985s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/meshes/rosmaster_x3/visual/back_left_wheel_X3.STL
+[0.995s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/meshes/rosmaster_x3/visual/back_right_wheel_X3.STL
+[1.016s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/meshes/rosmaster_x3/visual/base_link_X3.STL
+[1.029s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/meshes/rosmaster_x3/visual/camera_link.STL
+[1.049s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/meshes/rosmaster_x3/visual/front_left_wheel_X3.STL
+[1.066s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/meshes/rosmaster_x3/visual/front_right_wheel_X3.STL
+[1.078s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/meshes/rosmaster_x3/visual/laser_link.STL
+[1.091s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/meshes/rplidar/rplidar_s2.stl
+[1.105s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/urdf/control/gazebo_sim_ros2_control.urdf.xacro
+[1.120s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/urdf/control/rosmaster_x3_ros2_control.urdf.xacro
+[1.129s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/urdf/control/velocity_control_plugin.urdf.xacro
+[1.139s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/urdf/mech/mecanum_wheel.urdf.xacro
+[1.152s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/urdf/mech/rosmaster_x3_base.urdf.xacro
+[1.161s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/urdf/robots/rosmaster_x3.urdf.xacro
+[1.170s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/urdf/sensors/imu.urdf.xacro
+[1.179s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/urdf/sensors/lidar.urdf.xacro
+[1.188s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/urdf/sensors/rgbd_camera.urdf.xacro
+[1.198s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/rviz/yahboom_rosmaster_description.rviz
+[1.210s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/ament_index/resource_index/package_run_dependencies/yahboom_rosmaster_description
+[1.220s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/ament_index/resource_index/parent_prefix_path/yahboom_rosmaster_description
+[1.233s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/environment/ament_prefix_path.sh
+[1.241s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/environment/ament_prefix_path.dsv
+[1.251s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/environment/path.sh
+[1.261s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/environment/path.dsv
+[1.268s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/local_setup.bash
+[1.276s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/local_setup.sh
+[1.287s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/local_setup.zsh
+[1.292s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/local_setup.dsv
+[1.308s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/package.dsv
+[1.322s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/ament_index/resource_index/packages/yahboom_rosmaster_description
+[1.334s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/cmake/yahboom_rosmaster_descriptionConfig.cmake
+[1.353s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/cmake/yahboom_rosmaster_descriptionConfig-version.cmake
+[1.374s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_description/share/yahboom_rosmaster_description/package.xml
+[1.393s] Invoked command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/itadmin/addison_ws/build/yahboom_rosmaster_description

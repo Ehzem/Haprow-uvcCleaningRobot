@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "yahboom_rosmaster_msgs__rs",
+		"source" : "/home/itadmin/addison_ws/build/yahboom_rosmaster_msgs/yahboom_rosmaster_msgs__rs"
+	}
+}

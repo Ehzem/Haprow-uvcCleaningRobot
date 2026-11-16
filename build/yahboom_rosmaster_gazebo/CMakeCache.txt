@@ -51,7 +51,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -247,23 +247,11 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Path to a file.
 CPPZMQ_INCLUDE_DIRS:PATH=/usr/include
 
+//The directory containing a CMake configuration file for CycloneDDS.
+CycloneDDS_DIR:PATH=/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/CycloneDDS
+
 //The directory containing a CMake configuration file for Eigen3.
 Eigen3_DIR:PATH=/usr/share/eigen3/cmake
-
-//Path to a library.
-FastCDR_LIBRARY_DEBUG:FILEPATH=FastCDR_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-FastCDR_LIBRARY_RELEASE:FILEPATH=/opt/ros/jazzy/lib/libfastcdr.so
-
-//Path to a file.
-FastRTPS_INCLUDE_DIR:PATH=/opt/ros/jazzy/include
-
-//Path to a library.
-FastRTPS_LIBRARY_DEBUG:FILEPATH=FastRTPS_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-FastRTPS_LIBRARY_RELEASE:FILEPATH=/opt/ros/jazzy/lib/libfastrtps.so
 
 //Compile with a sanitizer. Options are: Address, Memory, MemoryWithOrigins,
 // Undefined, Thread, Leak, 'Address;Undefined', CFI
@@ -273,15 +261,6 @@ GZ_SANITIZER:STRING=
 // Options are: Address, Memory, MemoryWithOrigins, Undefined,
 // Thread, Leak, 'Address;Undefined', CFI
 IGN_SANITIZER:STRING=
-
-//Path to a library.
-OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
-
-//Path to a file.
-OPENSSL_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a library.
-OPENSSL_SSL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libssl.so
 
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
@@ -316,8 +295,11 @@ Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotoc.so
 //Path to a library.
 Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotoc.so
 
+//Select ROS middleware implementation to link against
+RMW_IMPLEMENTATION:STRING=rmw_cyclonedds_cpp
+
 //Name of the computer/site where compile is being run
-SITE:STRING=itadmin-OptiPlex-5000
+SITE:STRING=buildkitsandbox
 
 //Path to a library.
 TINYXML2_LIBRARY_tinyxml2:FILEPATH=/usr/lib/x86_64-linux-gnu/libtinyxml2.so
@@ -466,17 +448,11 @@ diagnostic_updater_DIR:PATH=/opt/ros/jazzy/share/diagnostic_updater/cmake
 //The directory containing a CMake configuration file for fastcdr.
 fastcdr_DIR:PATH=/opt/ros/jazzy/lib/cmake/fastcdr
 
-//The directory containing a CMake configuration file for fastrtps.
-fastrtps_DIR:PATH=/opt/ros/jazzy/share/fastrtps/cmake
-
 //The directory containing a CMake configuration file for fastrtps_cmake_module.
 fastrtps_cmake_module_DIR:PATH=/opt/ros/jazzy/share/fastrtps_cmake_module/cmake
 
 //The directory containing a CMake configuration file for fmt.
 fmt_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/fmt
-
-//The directory containing a CMake configuration file for foonathan_memory.
-foonathan_memory_DIR:PATH=/opt/ros/jazzy/lib/foonathan_memory/cmake
 
 //The directory containing a CMake configuration file for generate_parameter_library.
 generate_parameter_library_DIR:PATH=/opt/ros/jazzy/share/generate_parameter_library/cmake
@@ -535,6 +511,15 @@ gz_utils_vendor_DIR:PATH=/opt/ros/jazzy/share/gz_utils_vendor/cmake
 //The directory containing a CMake configuration file for hardware_interface.
 hardware_interface_DIR:PATH=/opt/ros/jazzy/share/hardware_interface/cmake
 
+//The directory containing a CMake configuration file for iceoryx_binding_c.
+iceoryx_binding_c_DIR:PATH=/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_binding_c
+
+//The directory containing a CMake configuration file for iceoryx_hoofs.
+iceoryx_hoofs_DIR:PATH=/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_hoofs
+
+//The directory containing a CMake configuration file for iceoryx_posh.
+iceoryx_posh_DIR:PATH=/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_posh
+
 //The directory containing a CMake configuration file for joint_limits.
 joint_limits_DIR:PATH=/opt/ros/jazzy/share/joint_limits/cmake
 
@@ -576,12 +561,6 @@ pkgcfg_lib_UUID_uuid:FILEPATH=/usr/lib/x86_64-linux-gnu/libuuid.so
 
 //Path to a library.
 pkgcfg_lib_ZeroMQ_zmq:FILEPATH=/usr/lib/x86_64-linux-gnu/libzmq.so
-
-//Path to a library.
-pkgcfg_lib__OPENSSL_crypto:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
-
-//Path to a library.
-pkgcfg_lib__OPENSSL_ssl:FILEPATH=/usr/lib/x86_64-linux-gnu/libssl.so
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/jazzy/share/pluginlib/cmake
@@ -631,14 +610,11 @@ realtime_tools_DIR:PATH=/opt/ros/jazzy/share/realtime_tools/cmake
 //The directory containing a CMake configuration file for rmw.
 rmw_DIR:PATH=/opt/ros/jazzy/share/rmw/cmake
 
+//The directory containing a CMake configuration file for rmw_cyclonedds_cpp.
+rmw_cyclonedds_cpp_DIR:PATH=/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake
+
 //The directory containing a CMake configuration file for rmw_dds_common.
 rmw_dds_common_DIR:PATH=/opt/ros/jazzy/share/rmw_dds_common/cmake
-
-//The directory containing a CMake configuration file for rmw_fastrtps_cpp.
-rmw_fastrtps_cpp_DIR:PATH=/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake
-
-//The directory containing a CMake configuration file for rmw_fastrtps_shared_cpp.
-rmw_fastrtps_shared_cpp_DIR:PATH=/opt/ros/jazzy/share/rmw_fastrtps_shared_cpp/cmake
 
 //The directory containing a CMake configuration file for rmw_implementation.
 rmw_implementation_DIR:PATH=/opt/ros/jazzy/share/rmw_implementation/cmake
@@ -951,10 +927,6 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 CPPZMQ_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //Details about finding Boost
 FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake][c ][v1.83.0()]
-//Details about finding FastRTPS
-FIND_PACKAGE_MESSAGE_DETAILS_FastRTPS:INTERNAL=[/opt/ros/jazzy/include][/opt/ros/jazzy/lib/libfastrtps.so;/opt/ros/jazzy/lib/libfastcdr.so][v(2.13)]
-//Details about finding OpenSSL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcrypto.so][/usr/include][c ][v3.0.13()]
 //Details about finding Protobuf
 FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/lib/x86_64-linux-gnu/libprotobuf.so][/usr/include][v3.21.12()]
 //Details about finding Python3
@@ -963,12 +935,6 @@ FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3][cfound componen
 FIND_PACKAGE_MESSAGE_DETAILS_UUID:INTERNAL=[TRUE][v()]
 //Details about finding ZeroMQ
 FIND_PACKAGE_MESSAGE_DETAILS_ZeroMQ:INTERNAL=[TRUE][v(4)]
-//ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
-OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENSSL_INCLUDE_DIR
-OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENSSL_SSL_LIBRARY
-OPENSSL_SSL_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_ARGN
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
@@ -1099,41 +1065,6 @@ ZeroMQ_libzmq_PREFIX:INTERNAL=
 ZeroMQ_libzmq_VERSION:INTERNAL=
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
-_OPENSSL_CFLAGS:INTERNAL=-I/usr/include
-_OPENSSL_CFLAGS_I:INTERNAL=
-_OPENSSL_CFLAGS_OTHER:INTERNAL=
-_OPENSSL_FOUND:INTERNAL=1
-_OPENSSL_INCLUDEDIR:INTERNAL=/usr/include
-_OPENSSL_INCLUDE_DIRS:INTERNAL=/usr/include
-_OPENSSL_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lssl;-lcrypto
-_OPENSSL_LDFLAGS_OTHER:INTERNAL=
-_OPENSSL_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
-_OPENSSL_LIBRARIES:INTERNAL=ssl;crypto
-_OPENSSL_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
-_OPENSSL_LIBS:INTERNAL=
-_OPENSSL_LIBS_L:INTERNAL=
-_OPENSSL_LIBS_OTHER:INTERNAL=
-_OPENSSL_LIBS_PATHS:INTERNAL=
-_OPENSSL_MODULE_NAME:INTERNAL=openssl
-_OPENSSL_PREFIX:INTERNAL=/usr
-_OPENSSL_STATIC_CFLAGS:INTERNAL=-I/usr/include
-_OPENSSL_STATIC_CFLAGS_I:INTERNAL=
-_OPENSSL_STATIC_CFLAGS_OTHER:INTERNAL=
-_OPENSSL_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include
-_OPENSSL_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lssl;-L/usr/lib/x86_64-linux-gnu;-ldl;-pthread;-lcrypto;-ldl;-pthread
-_OPENSSL_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread
-_OPENSSL_STATIC_LIBDIR:INTERNAL=
-_OPENSSL_STATIC_LIBRARIES:INTERNAL=ssl;dl;crypto;dl
-_OPENSSL_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu
-_OPENSSL_STATIC_LIBS:INTERNAL=
-_OPENSSL_STATIC_LIBS_L:INTERNAL=
-_OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
-_OPENSSL_STATIC_LIBS_PATHS:INTERNAL=
-_OPENSSL_VERSION:INTERNAL=3.0.13
-_OPENSSL_openssl_INCLUDEDIR:INTERNAL=
-_OPENSSL_openssl_LIBDIR:INTERNAL=
-_OPENSSL_openssl_PREFIX:INTERNAL=
-_OPENSSL_openssl_VERSION:INTERNAL=
 //Compiler reason failure
 _Python3_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure
@@ -1150,11 +1081,9 @@ __AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=0
 __pkg_config_arguments_TINYXML2:INTERNAL=tinyxml2
 __pkg_config_arguments_UUID:INTERNAL=uuid
 __pkg_config_arguments_ZeroMQ:INTERNAL=libzmq >= 4
-__pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
 __pkg_config_checked_TINYXML2:INTERNAL=1
 __pkg_config_checked_UUID:INTERNAL=1
 __pkg_config_checked_ZeroMQ:INTERNAL=1
-__pkg_config_checked__OPENSSL:INTERNAL=1
 //ADVANCED property for variable: boost_headers_DIR
 boost_headers_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_TINYXML2_tinyxml2
@@ -1163,9 +1092,5 @@ pkgcfg_lib_TINYXML2_tinyxml2-ADVANCED:INTERNAL=1
 pkgcfg_lib_UUID_uuid-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_ZeroMQ_zmq
 pkgcfg_lib_ZeroMQ_zmq-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib__OPENSSL_crypto
-pkgcfg_lib__OPENSSL_crypto-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib__OPENSSL_ssl
-pkgcfg_lib__OPENSSL_ssl-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 

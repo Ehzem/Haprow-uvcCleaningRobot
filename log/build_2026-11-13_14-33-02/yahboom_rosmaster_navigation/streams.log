@@ -1,0 +1,134 @@
+[0.007s] Invoking command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/itadmin/addison_ws/src/yahboom_rosmaster/yahboom_rosmaster_navigation -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/itadmin/addison_ws/install/yahboom_rosmaster_navigation
+[0.056s] -- The C compiler identification is GNU 13.3.0
+[0.120s] -- The CXX compiler identification is GNU 13.3.0
+[0.149s] -- Detecting C compiler ABI info
+[0.334s] -- Detecting C compiler ABI info - done
+[0.340s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.340s] -- Detecting C compile features
+[0.340s] -- Detecting C compile features - done
+[0.352s] -- Detecting CXX compiler ABI info
+[0.504s] -- Detecting CXX compiler ABI info - done
+[0.515s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.515s] -- Detecting CXX compile features
+[0.516s] -- Detecting CXX compile features - done
+[0.521s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.641s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.706s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.748s] -- Found geometry_msgs: 5.3.8 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.789s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.802s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.818s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.833s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.870s] -- Found navigation2: 1.3.13 (/opt/ros/jazzy/share/navigation2/cmake)
+[0.875s] -- Found nav2_bringup: 1.3.13 (/opt/ros/jazzy/share/nav2_bringup/cmake)
+[0.875s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.930s] -- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.934s] -- Found rmw_cyclonedds_cpp: 2.2.4 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)
+[0.958s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.011s] -- Found rclpy: 7.1.12 (/opt/ros/jazzy/share/rclpy/cmake)
+[1.015s] -- Found slam_toolbox: 2.8.5 (/opt/ros/jazzy/share/slam_toolbox/cmake)
+[1.225s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.246s] -- Found eigen3_cmake_module: 0.3.1 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[1.246s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.246s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.340s] -- Setting OGRE_DIR to: '/opt/ros/jazzy/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[1.340s] -- Found OGRE
+[1.340s] --   static     : OFF
+[1.340s] --   components : MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[1.341s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[1.341s] --   media      : /opt/ros/jazzy/opt/rviz_ogre_vendor/share/OGRE/Media
+[1.341s] -- OGRE_LIBRARIES: OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[1.341s] -- OGRE_LIBRARY_DIRS: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib
+[1.341s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[1.341s] -- OGRE_PLUGIN_DIR: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/OGRE
+[1.341s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[1.341s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[1.341s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[1.341s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[1.366s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[1.374s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[1.535s] -- Found X11: /usr/include   
+[1.535s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[1.663s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[1.663s] -- Looking for gethostbyname
+[1.785s] -- Looking for gethostbyname - found
+[1.785s] -- Looking for connect
+[1.904s] -- Looking for connect - found
+[1.904s] -- Looking for remove
+[2.075s] -- Looking for remove - found
+[2.075s] -- Looking for shmat
+[2.187s] -- Looking for shmat - found
+[2.187s] -- Looking for IceConnectionNumber in ICE
+[2.314s] -- Looking for IceConnectionNumber in ICE - found
+[2.327s] -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+[2.507s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.601s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.601s] -- Configured cppcheck include dirs: 
+[2.601s] -- Configured cppcheck exclude dirs and/or files: 
+[2.602s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.602s] -- Configured 'flake8' exclude dirs and/or files: 
+[2.602s] -- Added test 'lint_cmake' to check CMake code style
+[2.603s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.604s] -- Added test 'uncrustify' to check C / C++ code style
+[2.604s] -- Configured uncrustify additional arguments: 
+[2.605s] -- Added test 'xmllint' to check XML markup files
+[2.606s] -- Configuring done (2.6s)
+[2.616s] -- Generating done (0.0s)
+[2.620s] -- Build files have been written to: /home/itadmin/addison_ws/build/yahboom_rosmaster_navigation
+[2.635s] Invoked command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/itadmin/addison_ws/src/yahboom_rosmaster/yahboom_rosmaster_navigation -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/itadmin/addison_ws/install/yahboom_rosmaster_navigation
+[2.636s] Invoking command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/itadmin/addison_ws/build/yahboom_rosmaster_navigation
+[2.690s] [ 50%] Building CXX object CMakeFiles/cmd_vel_relay.dir/src/cmd_vel_relay_node.cpp.o
+[2.701s] [ 50%] Built target ament_cmake_python_symlink_yahboom_rosmaster_navigation
+[2.841s] running egg_info
+[2.841s] creating yahboom_rosmaster_navigation.egg-info
+[2.850s] writing yahboom_rosmaster_navigation.egg-info/PKG-INFO
+[2.850s] writing dependency_links to yahboom_rosmaster_navigation.egg-info/dependency_links.txt
+[2.850s] writing top-level names to yahboom_rosmaster_navigation.egg-info/top_level.txt
+[2.850s] writing manifest file 'yahboom_rosmaster_navigation.egg-info/SOURCES.txt'
+[2.880s] reading manifest file 'yahboom_rosmaster_navigation.egg-info/SOURCES.txt'
+[2.880s] writing manifest file 'yahboom_rosmaster_navigation.egg-info/SOURCES.txt'
+[2.905s] [ 50%] Built target ament_cmake_python_build_yahboom_rosmaster_navigation_egg
+[9.580s] [100%] Linking CXX executable cmd_vel_relay
+[9.704s] [100%] Built target cmd_vel_relay
+[9.712s] Invoked command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/itadmin/addison_ws/build/yahboom_rosmaster_navigation
+[9.714s] Invoking command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/itadmin/addison_ws/build/yahboom_rosmaster_navigation
+[9.722s] -- Install configuration: "Release"
+[9.722s] -- Execute custom install script
+[9.723s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/yahboom_rosmaster_navigation/cmd_vel_relay
+[9.732s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/config/rosmaster_x3_nav2_default_params.yaml
+[9.744s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/config/rosmaster_x3_nav2_regulated_pure_pursuit_controller.yaml
+[9.756s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/maps/cafe_world_map.pgm
+[9.771s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/maps/cafe_world_map.yaml
+[9.778s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/maps/house_world_map.pgm
+[9.785s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/maps/house_world_map.yaml
+[9.794s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/rviz/nav2_default_view.rviz
+[9.804s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/environment/pythonpath.sh
+[9.815s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/environment/pythonpath.dsv
+[9.828s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/python3.12/site-packages/yahboom_rosmaster_navigation-0.0.0-py3.12.egg-info/PKG-INFO
+[9.837s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/python3.12/site-packages/yahboom_rosmaster_navigation-0.0.0-py3.12.egg-info/SOURCES.txt
+[9.849s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/python3.12/site-packages/yahboom_rosmaster_navigation-0.0.0-py3.12.egg-info/dependency_links.txt
+[9.862s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/python3.12/site-packages/yahboom_rosmaster_navigation-0.0.0-py3.12.egg-info/top_level.txt
+[9.874s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/python3.12/site-packages/yahboom_rosmaster_navigation/__init__.py
+[9.887s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/python3.12/site-packages/yahboom_rosmaster_navigation/posestamped_msg_generator.py
+[9.904s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/yahboom_rosmaster_navigation/assisted_teleoperation.py
+[9.916s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/yahboom_rosmaster_navigation/nav_to_pose.py
+[9.924s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/yahboom_rosmaster_navigation/test_nav_to_pose.py
+[9.932s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/ament_index/resource_index/package_run_dependencies/yahboom_rosmaster_navigation
+[9.943s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/ament_index/resource_index/parent_prefix_path/yahboom_rosmaster_navigation
+[9.956s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/environment/ament_prefix_path.sh
+[9.967s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/environment/ament_prefix_path.dsv
+[9.982s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/environment/path.sh
+[10.001s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/environment/path.dsv
+[10.010s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/local_setup.bash
+[10.027s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/local_setup.sh
+[10.050s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/local_setup.zsh
+[10.064s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/local_setup.dsv
+[10.079s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/package.dsv
+[10.091s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/ament_index/resource_index/packages/yahboom_rosmaster_navigation
+[10.102s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/cmake/yahboom_rosmaster_navigationConfig.cmake
+[10.117s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/cmake/yahboom_rosmaster_navigationConfig-version.cmake
+[10.130s] -- Symlinking: /home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/share/yahboom_rosmaster_navigation/package.xml
+[10.173s] Listing '/home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/python3.12/site-packages/yahboom_rosmaster_navigation'...
+[10.173s] Compiling '/home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/python3.12/site-packages/yahboom_rosmaster_navigation/__init__.py'...
+[10.173s] Compiling '/home/itadmin/addison_ws/install/yahboom_rosmaster_navigation/lib/python3.12/site-packages/yahboom_rosmaster_navigation/posestamped_msg_generator.py'...
+[10.178s] Invoked command in '/home/itadmin/addison_ws/build/yahboom_rosmaster_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/itadmin/addison_ws/build/yahboom_rosmaster_navigation

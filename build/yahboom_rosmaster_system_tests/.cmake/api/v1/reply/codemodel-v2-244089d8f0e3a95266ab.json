@@ -1,0 +1,115 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-c7e5cb4c77af95dad43d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "yahboom_rosmaster_system_tests",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "mecanum_parameters_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mecanum_parameters_node-Release-65e9cfc5e557362dcc26.json",
+					"name" : "mecanum_parameters_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "set_cleaning_state_service::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-set_cleaning_state_service-Release-f5040051ce2696d6fc3d.json",
+					"name" : "set_cleaning_state_service",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "square_mecanum_controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-square_mecanum_controller-Release-0c27832f6c7d97e89f6d.json",
+					"name" : "square_mecanum_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "timed_rotation_action_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-timed_rotation_action_client-Release-320dbc247747c85e1b37.json",
+					"name" : "timed_rotation_action_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "timed_rotation_action_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-timed_rotation_action_server-Release-0ad051dac72f2f493920.json",
+					"name" : "timed_rotation_action_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-a79c4dbc0478e9b12a1d.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "yahboom_rosmaster_system_tests_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-yahboom_rosmaster_system_tests_uninstall-Release-62e81b8054c2d70eb78a.json",
+					"name" : "yahboom_rosmaster_system_tests_uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/itadmin/addison_ws/build/yahboom_rosmaster_system_tests",
+		"source" : "/home/itadmin/addison_ws/src/yahboom_rosmaster/yahboom_rosmaster_system_tests"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
