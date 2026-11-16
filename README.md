@@ -156,24 +156,62 @@ are bundled in the image or shared automatically between teammates.
 
 ### 6. Create a branch, edit and push — inside Docker
 
-Choose a new branch name for each task; `feature/my-change` is an example:
+Use a separate branch for each task. Replace `branch-name`, `teammate-branch`
+and the commit message below with your own values. Branch names cannot contain
+spaces; use names such as `sensor-update` or `feature/navigation`.
+
+**Create your branch, work, commit and push it:**
 
 ```bash
-git switch -c feature/my-change
+git checkout -b "branch-name"
 
-# Edit the source or configuration files for your task.
-git add src docker Dockerfile compose.yaml README.md .gitignore .dockerignore
-git diff --cached --stat
-git commit -m "Describe the changes"
-git push -u origin feature/my-change
+# Make your changes, then review what you are about to commit.
+git status
+git add .
+git commit -m "message"
+git push -u origin "branch-name"
 ```
 
-Review the staged summary before committing. The repository includes the host's
-`build/`, `install/`, and `log/` snapshot, while Docker generates its own outputs.
-Those differences are expected. Stage source/configuration files intentionally
-rather than using `git add .` to avoid committing generated output accidentally.
-The branch-creation command does not switch to the latest remote commit: it
-starts from the current local commit and keeps existing working-file changes.
+`git add .` stages all changes, including generated `build/`, `install/`, and
+`log/` files in this repository. Review `git status` before committing.
+Pushing publishes your branch on GitHub; it does not merge it into `main`.
+Keep shared work on its own branch rather than merging it into `main`.
+
+**Find and use work published on another branch:**
+
+```bash
+git fetch origin
+git branch -a
+git checkout "teammate-branch"
+git pull --ff-only origin "teammate-branch"
+```
+
+If the branch exists only on `origin`, `git checkout "teammate-branch"` normally
+creates a local branch tracking it. You can now inspect or run that work.
+`git fetch origin` refreshes remote branch information; the `git pull` command
+updates the checked-out local branch without creating an automatic merge commit.
+Commit your current work before switching branches. If Git reports conflicting
+local changes, resolve or save them before continuing.
+
+**Merge that work locally into your own working branch and continue:**
+
+```bash
+git checkout "branch-name"
+git merge "teammate-branch"
+
+# Resolve merge conflicts if Git reports any, then continue your work.
+git add .
+git commit -m "message"
+# When ready, publish your updated working branch:
+git push -u origin "branch-name"
+```
+
+If the merge has conflicts, resolve the files and use `git add .` followed by
+`git commit -m "Resolve merge conflicts"` to complete it before continuing.
+A successful merge may already create its merge commit or fast-forward the
+branch; make another commit only after you have additional changes to save.
+This integration happens on your local working branch. It does not update
+GitHub until you push, and it does not merge anything into `main`.
 
 ### 7. Exit and reopen
 
