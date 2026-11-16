@@ -169,7 +169,7 @@ git checkout -b "branch-name"
 git status
 git add .
 git commit -m "message"
-git push -u origin "branch-name"
+git push -u origin <branch-name>
 ```
 
 `git add .` stages all changes, including generated `build/`, `install/`, and
@@ -182,8 +182,7 @@ Keep shared work on its own branch rather than merging it into `main`.
 ```bash
 git fetch origin
 git branch -a
-git checkout "teammate-branch"
-git pull --ff-only origin "teammate-branch"
+git checkout <teammate-branch>
 ```
 
 If the branch exists only on `origin`, `git checkout "teammate-branch"` normally
@@ -196,14 +195,14 @@ local changes, resolve or save them before continuing.
 **Merge that work locally into your own working branch and continue:**
 
 ```bash
-git checkout "branch-name"
-git merge "teammate-branch"
+git checkout <branch-name>
+git merge <teammate-branch>
 
 # Resolve merge conflicts if Git reports any, then continue your work.
 git add .
 git commit -m "message"
 # When ready, publish your updated working branch:
-git push -u origin "branch-name"
+git push -u origin <branch-name>
 ```
 
 If the merge has conflicts, resolve the files and use `git add .` followed by
