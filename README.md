@@ -18,6 +18,7 @@ addison_ws/
 ├── build/                             Uploaded host build snapshot
 ├── install/                           Uploaded host install snapshot
 ├── log/                               Uploaded host colcon logs
+├── matlab_kinematics/                  URDF-backed equations and MATLAB examples
 ├── docker/
 │   ├── README.md                      Detailed Docker guide
 │   ├── compose.dev.yaml                Persistent workspace/login volumes
@@ -293,6 +294,57 @@ For running directly on Ubuntu without Docker, use the separate
 See the [theatre documentation](src/yahboom_rosmaster/yahboom_rosmaster_gazebo/OPERATING_THEATRE.md)
 and [UVC description](src/yahboom_rosmaster/uvc_robot_description/README.md)
 for robot details and driving commands.
+
+## Check UVC motion equations with the keyboard
+
+The calculations now read the actual URDF: **80 mm wheel radius, 320.44 mm
+wheel separation, +X forward, +Z left yaw, and positive-forward wheel joints**.
+The base origin is under the drive axle; no 135 mm planar correction is used.
+See [kinematics and testing](matlab_kinematics/README.md) for the equations and
+MATLAB examples. These examples are mathematical checks; Gazebo supplies the
+measured motion feedback.
+
+To test this checkout using the existing Docker image, run on the **host**:
+
+```bash
+./docker/test-motion.sh
+```
+
+This opens a temporary GUI-enabled container using this checkout's source,
+rebuilds the UVC keyboard tool and starts the theatre and tmux. It leaves your
+existing development volumes untouched and uses an isolated ROS/Gazebo test
+namespace. Press **Ctrl+B**, release, then **2**
+to focus the teleop window, then start exactly one controller:
+
+```bash
+ros2 run uvc_robot_description uvc_keyboard
+```
+
+Use **W/S** forward/reverse, **A/D** turn in place,
+**Q/E** forward curves, **Space/X** stop, and **Esc/Ctrl+C** stop and exit.
+Hold/repeat keys; the command stops after 0.4 seconds without a key.
+The screen compares equation-predicted wheel RPM with measured wheel speeds
+and odometry. Use `./docker/test-motion.sh --headless` to test without GUI windows.
+
+For an already updated and sourced Docker/native workspace, use two terminals:
+
+```bash
+ros2 launch yahboom_rosmaster_gazebo operating_theatre.launch.py
+# In a second terminal with the same ROS environment:
+ros2 run uvc_robot_description uvc_keyboard
+```
+
+Existing Docker images/volumes do not gain the new executable automatically.
+After updating source inside a development volume, rebuild there:
+
+```bash
+colcon build --packages-select uvc_robot_description --symlink-install
+source install/setup.bash
+```
+
+The host helper above handles this in a disposable container without needing a
+new image build. For future fresh images, the Dockerfile also includes the
+`matlab_kinematics/` directory; MATLAB itself is not installed in the image.
 
 ## Simulation scope
 

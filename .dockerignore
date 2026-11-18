@@ -9,6 +9,8 @@
 !src/**
 !docker/
 !docker/**
+!matlab_kinematics/
+!matlab_kinematics/**
 **/.git
 **/__pycache__
 **/*.pyc

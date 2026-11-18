@@ -75,6 +75,7 @@ COPY docker/connect-github.py /usr/local/bin/workspace-connect-github
 RUN chmod +x /usr/local/bin/workspace-connect-github
 COPY --chown=itadmin:itadmin .gitignore .dockerignore Dockerfile compose.yaml README.md ./
 COPY --chown=itadmin:itadmin docker/ ./docker/
+COPY --chown=itadmin:itadmin matlab_kinematics/ ./matlab_kinematics/
 USER itadmin
 ARG GITHUB_REPOSITORY=https://github.com/Ehzem/Haprow-uvcCleaningRobot.git
 ARG GITHUB_BRANCH=main

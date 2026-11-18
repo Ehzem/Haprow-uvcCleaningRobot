@@ -207,14 +207,24 @@ sudo docker compose -f compose.yaml -f docker/compose.dev.yaml run --rm workspac
 
 This opens tmux windows `0:simulation`, `1:terminal` and `2:teleop`. Switch with
 Ctrl+B, release, then press 0/1/2. If no display is available, the helper uses
-Xvfb and software rendering so lidar can run. In the teleop window:
+Xvfb and software rendering so lidar can run. The teleop window is a shell; it does not
+automatically start a controller. Start exactly one keyboard monitor there
+(or in one other sourced terminal):
 
 ```bash
-ros2 run teleop_twist_keyboard teleop_twist_keyboard
+ros2 run uvc_robot_description uvc_keyboard
 ```
 
-The robot accepts ordinary Twist messages on `/cmd_vel`. Explicitly stop it when
-finished:
+Use W/S for forward/reverse, A/D for in-place turns, Q/E for forward curves,
+Space/X to stop, and Esc/Ctrl+C to stop and exit. Hold/repeat movement keys; the
+monitor stops after 0.4 seconds without input. It displays expected and measured
+wheel speeds and odometry. Older images must rebuild the description package
+after updating source. For this checkout, `./docker/test-motion.sh` runs the
+updated helper in a disposable container with read-only host source and without
+mounting your development volumes. See [kinematics testing](../matlab_kinematics/README.md).
+
+The robot accepts ordinary Twist messages on `/cmd_vel`. If using another velocity
+publisher, explicitly stop it when finished:
 
 ```bash
 ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist '{}'

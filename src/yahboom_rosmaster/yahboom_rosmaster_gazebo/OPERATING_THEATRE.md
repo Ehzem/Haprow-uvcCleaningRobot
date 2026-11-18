@@ -26,6 +26,19 @@ onto the floor. Override its starting pose with `x:=... y:=... z:=... yaw:=...`.
 
 ## Driving
 
+For keyboard tests with wheel-speed and odometry feedback, run this in a second
+sourced interactive terminal after rebuilding `uvc_robot_description`:
+
+```bash
+ros2 run uvc_robot_description uvc_keyboard
+```
+
+W/S move forward/back, A/D turn in place, Q/E command forward curves, Space/X
+stop and Esc/Ctrl+C stop/exit. Hold/repeat keys; timeout stopping is 0.4 seconds.
+See the [kinematics guide](../../../matlab_kinematics/README.md) for equations
+and a Docker host helper for testing the current checkout.
+
+
 The UVC model accepts `geometry_msgs/msg/Twist` on `/cmd_vel`. It uses two drive
 wheels and front caster contact approximations; it cannot strafe like the X3.
 For example, in another sourced terminal, move slowly forward:

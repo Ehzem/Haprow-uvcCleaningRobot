@@ -16,6 +16,8 @@ if ! tmux has-session -t "${session}" 2>/dev/null; then
     tmux new-session -d -s "${session}" -n simulation -c "${ROS_WORKSPACE}" \
         "bash -ic '${launcher} headless:=${headless} use_rviz:=${rviz}; exec bash'"
     tmux new-window -t "${session}" -n terminal -c "${ROS_WORKSPACE}" bash
+    # Leave control opt-in: an idle keyboard node publishes zeros and would
+    # override a controller started manually in another terminal.
     tmux new-window -t "${session}" -n teleop -c "${ROS_WORKSPACE}" bash
     tmux select-window -t "${session}:simulation"
 fi
