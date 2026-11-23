@@ -45,22 +45,14 @@ def generate_launch_description():
                         '-z', LaunchConfiguration('z'), '-Y', LaunchConfiguration('yaw')]),
         Node(package='ros_gz_bridge', executable='parameter_bridge', output='screen',
              parameters=[{'config_file': os.path.join(package, 'config/uvc_robot_bridge.yaml')}]),
-	Node(
-            package='ros_gz_image',
-            executable='image_bridge',
-            name='left_camera_bridge',
-            arguments=['/stereo/left/image'],
-            parameters=[{'use_sim_time': True}],
-            output='screen',
-        ),
-
+    ] + [
         Node(
             package='ros_gz_image',
             executable='image_bridge',
-            name='right_camera_bridge',
-            arguments=['/stereo/right/image'],
+            name=f'{side}_camera_bridge',
+            arguments=[f'/stereo/{side}/image'],
             parameters=[{'use_sim_time': True}],
             output='screen',
-        ),
+        )
+        for side in ('left', 'right')
     ])
-   

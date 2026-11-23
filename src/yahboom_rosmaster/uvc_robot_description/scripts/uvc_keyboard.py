@@ -2,6 +2,7 @@
 """Keyboard motion checks with URDF-derived expected and measured wheel speeds."""
 import argparse
 import math
+import os
 from pathlib import Path
 import select
 import signal
@@ -67,7 +68,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--linear-speed', type=float, default=.15)
     parser.add_argument('--angular-speed', type=float, default=.4)
-    parser.add_argument('--key-timeout', type=float, default=.4)
+    parser.add_argument('--key-timeout', type=float, default=.65)
     options, ros_args = parser.parse_known_args()
     if not sys.stdin.isatty():
         parser.error('Run in an interactive terminal, e.g. docker exec -it or the tmux teleop window')
@@ -104,13 +105,15 @@ def main():
     try:
         tty.setcbreak(fd)
         while rclpy.ok():
-            if select.select([sys.stdin], [], [], .02)[0]:
-                key = sys.stdin.read(1)
-                if key in ('\x03', '\x1b', ''):
+            if select.select([fd], [], [], .02)[0]:
+                # Read directly from the descriptor so select can see all pending input.
+                keys = os.read(fd, 1024)
+                if not keys or b'\x03' in keys or b'\x1b' in keys:
                     break
-                requested = command_for_key(key, options.linear_speed, options.angular_speed)
-                if requested is not None:
-                    command, last_key = requested, time.monotonic()
+                for key in keys.decode('ascii', errors='ignore'):
+                    requested = command_for_key(key, options.linear_speed, options.angular_speed)
+                    if requested is not None:
+                        command, last_key = requested, time.monotonic()
             rclpy.spin_once(node, timeout_sec=0.)
             now = time.monotonic()
             current = active_command(command, last_key, now, options.key_timeout)
@@ -123,7 +126,9 @@ def main():
                       'W/S forward/back | A/D rotate left/right | Q/E forward curves\n'
                       'Z/C reverse curves | Space/X stop | Esc or Ctrl+C quit\n'
                       f'Hold/repeat a movement key; stops after {options.key_timeout:.2f}s without a key.\n'
-                      'Use only this velocity publisher while testing.\n\n'
+                      + ('Velocity subscriber connected.\n\n'
+                         if node.publisher.get_subscription_count()
+                         else 'Waiting for the simulation velocity bridge.\n\n')
                       + node.status(current, now), flush=True)
                 last_display = now
     except (KeyboardInterrupt, rclpy.executors.ExternalShutdownException):

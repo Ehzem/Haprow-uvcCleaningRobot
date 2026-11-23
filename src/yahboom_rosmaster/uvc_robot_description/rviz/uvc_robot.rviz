@@ -40,6 +40,38 @@ Visualization Manager:
       Style: Points
       Color Transformer: FlatColor
       Color: 255; 80; 80
+    - Class: rviz_default_plugins/Image
+      Name: Left camera
+      Enabled: true
+      Topic:
+        Value: /stereo/left/image
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+    - Class: rviz_default_plugins/Image
+      Name: Right camera
+      Enabled: true
+      Topic:
+        Value: /stereo/right/image
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+    - Class: rviz_imu_plugin/Imu
+      Name: IMU orientation
+      Enabled: true
+      Axes properties:
+        Enable axes: true
+        Axes scale: 0.2
+      Topic:
+        Value: /imu/data
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
   Views:
     Current:
       Class: rviz_default_plugins/Orbit

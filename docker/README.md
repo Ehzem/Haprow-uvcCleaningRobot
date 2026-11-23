@@ -384,7 +384,7 @@ colcon --log-base .native-log build \
   --build-base .native-build --install-base .native-install \
   --symlink-install --executor sequential
 source .native-install/setup.bash
-ros2 launch yahboom_rosmaster_gazebo operating_theatre.launch.py
+ros2 launch yahboom_rosmaster_gazebo operating_theatre_keyboard.launch.py
 ```
 
 The `.native-*` directories are ignored by Git. Docker continues to use its own

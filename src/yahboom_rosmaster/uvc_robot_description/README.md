@@ -58,6 +58,6 @@ After rebuilding and sourcing this package, run `ros2 run uvc_robot_description
 uvc_keyboard` in an interactive terminal while the theatre simulation is running.
 W/S move forward/back, A/D rotate left/right, Q/E command forward curves, Space/X
 stop and Esc/Ctrl+C stop/exit. Hold/repeat movement keys; the tool stops after
-0.4 seconds without input. Expected wheel RPM are calculated from this package's
+0.65 seconds without input. Expected wheel RPM are calculated from this package's
 URDF and compared with wheel-state and odometry feedback. See the
 [kinematics guide](../../../matlab_kinematics/README.md) for full test instructions.

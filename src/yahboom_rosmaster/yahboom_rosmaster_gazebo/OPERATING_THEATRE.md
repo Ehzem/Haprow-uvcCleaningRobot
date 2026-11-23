@@ -7,15 +7,25 @@ then launch from a desktop terminal:
 cd ~/addison_ws
 source /opt/ros/jazzy/setup.bash
 source .native-install/setup.bash
-ros2 launch yahboom_rosmaster_gazebo operating_theatre.launch.py
+ros2 launch yahboom_rosmaster_gazebo operating_theatre_keyboard.launch.py
 ```
 
-Inside Docker, use the already sourced shell and the same `ros2 launch` command.
+On the desktop, the unified launch opens Gazebo, RViz, and a **UVC Keyboard**
+window. Focus the keyboard window to drive. Press Esc there to stop the robot
+and exit the session. Add `headless:=true` to skip the Gazebo window. For ROS or Gazebo
+diagnostics from another shell, use `ROS_DOMAIN_ID=78` and
+`GZ_PARTITION=uvc_operating_theatre`. The launch arguments `ros_domain_id`
+and `gz_partition` can override these defaults.
+
+Inside Docker, use the already sourced shell and `operating_theatre.launch.py`
+with the keyboard controller in the tmux teleop pane.
+If RViz reports a `GLIBC_PRIVATE` symbol error from a Snap library in the VS Code
+integrated terminal, run the launch from a regular desktop terminal.
 GUI windows need the [Docker GUI configuration](../../../docker/README.md#gazebo-and-rviz-windows);
 `workspace-tmux --headless` handles a server without a display.
 
 This starts the theatre and the supplied UVC CAD robot, with differential drive,
-odometry, simulated lidar and IMU, ROS bridges, robot transforms, and RViz.
+odometry, lidar, IMU, two forward-facing cameras, ROS bridges, robot transforms, and RViz.
 The theatre launch no longer spawns ROSMASTER X3 or its controllers.
 For Gazebo without RViz, append `use_rviz:=false`. For a server without a Gazebo
 window, append `headless:=true use_rviz:=false`; rendered sensors still require
@@ -24,17 +34,32 @@ graphics support. Stop with Ctrl+C before relaunching.
 The robot starts in the clear central area at `(0, 0, 0.02)` metres and settles
 onto the floor. Override its starting pose with `x:=... y:=... z:=... yaw:=...`.
 
+## Testing with less graphics load
+
+Stop existing simulation launches before starting another one. On a desktop,
+skip the Gazebo window and keep the RViz sensor displays:
+
+```bash
+ros2 launch yahboom_rosmaster_gazebo operating_theatre_keyboard.launch.py headless:=true
+```
+
+Both cameras publish at 640 × 360 and 5 Hz of simulation time. Gazebo still
+renders the camera images and lidar data in the server. If another ROS or
+Gazebo session needs to stay open, set `ROS_DOMAIN_ID` and `GZ_PARTITION` to
+unused values before launching, and use the same values in the keyboard
+terminal. This keeps the simulation clocks and velocity topics from overlapping.
+
 ## Driving
 
-For keyboard tests with wheel-speed and odometry feedback, run this in a second
-sourced interactive terminal after rebuilding `uvc_robot_description`:
+The unified launch starts the keyboard controller for you. With the simulation-only
+launch, run it manually from a sourced interactive terminal:
 
 ```bash
 ros2 run uvc_robot_description uvc_keyboard
 ```
 
 W/S move forward/back, A/D turn in place, Q/E command forward curves, Space/X
-stop and Esc/Ctrl+C stop/exit. Hold/repeat keys; timeout stopping is 0.4 seconds.
+stop and Esc/Ctrl+C stop/exit. Hold/repeat keys; timeout stopping is 0.65 seconds.
 See the [kinematics guide](../../../matlab_kinematics/README.md) for equations
 and a Docker host helper for testing the current checkout.
 
@@ -57,6 +82,35 @@ A velocity command persists until replaced; do not assume stopping the publisher
 stops the robot. The model limits linear speed to 0.3 m/s and turning speed to
 1 rad/s. It publishes `/odom`, `/tf`, `/joint_states`, `/scan`, and `/imu/data`.
 
+## Checking the sensors in RViz
+
+Select **Move Camera** in the RViz toolbar. In the main 3D view, left-drag to
+orbit, middle-drag to pan, and scroll to zoom.
+
+With the launch running, use the **Left camera** and **Right camera** panes to see
+theatre equipment from the robot. In the 3D view, **Laser scan** shows the
+horizontal slice measured by the lidar, and **IMU orientation** shows the IMU
+axes. The 3D view is fixed to `odom`, so scans stay in the same coordinate
+system as the robot moves. Drive and turn the robot to compare the camera
+images and scan against the scene in Gazebo.
+
+From another sourced terminal, check that frames arrive on both image topics
+and inspect one message from each remaining sensor topic:
+
+```bash
+ros2 topic hz /stereo/left/image
+ros2 topic hz /stereo/right/image
+ros2 topic echo /stereo/left/camera_info --once
+ros2 topic echo /stereo/right/camera_info --once
+ros2 topic echo /scan --once --qos-reliability best_effort
+ros2 topic echo /imu/data --once --qos-reliability best_effort
+ros2 run tf2_ros tf2_echo odom laser_frame
+```
+
+Stop each `hz` or `tf2_echo` command with Ctrl+C before running the next one.
+If a sensor has no data, check that Gazebo is playing and use `gz topic -l`
+to see whether the corresponding Gazebo topic is present.
+
 ## UVC model
 
 `uvc_robot_description/urdf/robots/uvc_robot.urdf` and
@@ -77,7 +131,6 @@ collisions use conservative box proxies; casters use low-friction spheres.
 The lidar is a simulation addition just ahead of the chassis at z=0.34 m. It is
 not a claim that the CAD includes a physical lidar at that location. Purple lamp
 surfaces preserve the CAD appearance; UV dose/disinfection physics are not modeled.
-Camera streams from the X3 are not reproduced by this launch.
 
 To regenerate the robot from the same source export:
 

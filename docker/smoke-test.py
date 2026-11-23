@@ -12,7 +12,7 @@ import rclpy
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from rclpy.qos import qos_profile_sensor_data
-from sensor_msgs.msg import Imu, JointState, LaserScan
+from sensor_msgs.msg import CameraInfo, Image, Imu, JointState, LaserScan
 
 
 def main():
@@ -47,6 +47,29 @@ def main():
         node.create_subscription(JointState, '/joint_states', count('joints'), 10),
         node.create_subscription(Imu, '/imu/data', count('imu'), qos_profile_sensor_data),
     ]
+    def image(name):
+        def callback(msg):
+            if msg.width and msg.height and msg.step and len(msg.data) == msg.step * msg.height:
+                messages[name] += 1
+        return callback
+
+    def camera_info(name):
+        def callback(msg):
+            if msg.width and msg.height and msg.k[0] > 0:
+                messages[name] += 1
+        return callback
+
+    for side in ('left', 'right'):
+        image_name = f'{side}_image'
+        info_name = f'{side}_camera_info'
+        messages[image_name] = messages[info_name] = 0
+        subscriptions.extend([
+            node.create_subscription(
+                Image, f'/stereo/{side}/image', image(image_name), qos_profile_sensor_data),
+            node.create_subscription(
+                CameraInfo, f'/stereo/{side}/camera_info', camera_info(info_name),
+                qos_profile_sensor_data),
+        ])
     try:
         deadline = time.monotonic() + 45
         while not (all(messages.values()) and latest.get('finite_ranges', 0)):

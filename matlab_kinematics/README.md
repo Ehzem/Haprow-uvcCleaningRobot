@@ -94,7 +94,7 @@ override movement commands with zeros.
 | Space or X | Stop |
 | Esc or Ctrl+C | Stop and exit |
 
-Hold/repeat a movement key. The tool sends zero after 0.4 seconds without a
+Hold/repeat a movement key. The tool sends zero after 0.65 seconds without a
 movement/stop key, and sends stop messages on normal exit, Ctrl+C, or SIGTERM.
 Default speeds are 0.15 m/s and 0.4 rad/s. To change them within URDF limits:
 
