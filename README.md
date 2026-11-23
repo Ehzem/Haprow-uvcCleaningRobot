@@ -346,6 +346,29 @@ The host helper above handles this in a disposable container without needing a
 new image build. For future fresh images, the Dockerfile also includes the
 `matlab_kinematics/` directory; MATLAB itself is not installed in the image.
 
+## Record CPU utilization during the experiment
+
+Start a CPU recorder in a third terminal **before** building/launching the
+simulation. Keep Terminal 1 (Gazebo/RViz) and Terminal 2 (keyboard) running as
+usual. In an updated Docker workspace, the third terminal can run:
+
+```bash
+cd /home/itadmin/addison_ws
+python3 docker/record_cpu.py --interval 0.5
+```
+
+No ROS sourcing is required for this command. Stop recording with Ctrl+C.
+Timestamped CSVs and JSON summaries are saved under `cpu_recordings/`, which is
+ignored by Git. They include host-wide/per-core CPU, per-process utilization,
+and the recorder cgroup's usage/throttling (the container when run inside it).
+
+For an already running container that does not have this new script yet, use
+[the copy-and-run commands](docker/CPU_RECORDING.md#existing-running-docker-container-no-image-rebuild-required).
+That guide also explains saving results onto the host before a disposable
+container is removed and interpreting percentages: process 100% means one core,
+while whole-host usage uses a 0–100% scale. These are sampled kernel counters,
+not an instantaneous execution trace.
+
 ## Simulation scope
 
 The UVC robot uses imported CAD visual geometry with approximated mass, inertia,

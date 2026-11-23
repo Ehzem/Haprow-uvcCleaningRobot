@@ -72,7 +72,8 @@ USER root
 RUN apt-get update && apt-get install -y --no-install-recommends gh \
     && rm -rf /var/lib/apt/lists/*
 COPY docker/connect-github.py /usr/local/bin/workspace-connect-github
-RUN chmod +x /usr/local/bin/workspace-connect-github
+COPY docker/record_cpu.py /usr/local/bin/workspace-record-cpu
+RUN chmod +x /usr/local/bin/workspace-connect-github /usr/local/bin/workspace-record-cpu
 COPY --chown=itadmin:itadmin .gitignore .dockerignore Dockerfile compose.yaml README.md ./
 COPY --chown=itadmin:itadmin docker/ ./docker/
 COPY --chown=itadmin:itadmin matlab_kinematics/ ./matlab_kinematics/

@@ -3,6 +3,7 @@
 /.native-build/
 /.native-install/
 /.native-log/
+/cpu_recordings/
 
 # Original upstream Git history retained locally, never uploaded.
 /.upstream-git/

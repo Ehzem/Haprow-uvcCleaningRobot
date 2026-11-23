@@ -352,6 +352,19 @@ settings via `sudo env NAME=value docker compose ...` so they reach Compose.
 The environment supplies navigation dependencies. It does not create a theatre
 map, configure UVC Nav2 or model UV dose/disinfection physics.
 
+## Record CPU utilization
+
+Use the [CPU recording guide](CPU_RECORDING.md) to record builds, Gazebo, RViz,
+ROS nodes and keyboard control to timestamped CSV files. The recorder needs only
+Python and Linux `/proc`; it does not require ROS sourcing. Newly built images
+include `workspace-record-cpu`, while the guide has commands for copying the
+script into an existing running container without rebuilding the image.
+
+Run the recorder in the same container as the experiment to obtain that
+container's cgroup CPU usage. Host-wide CPU counters remain host-wide even
+inside Docker. Save recordings before removing a disposable container, or keep
+them in the persistent development workspace. CPU data are ignored by Git.
+
 ## Native host build
 
 Use Ubuntu 24.04 with ROS 2 Jazzy, colcon and rosdep installed. Clone this
