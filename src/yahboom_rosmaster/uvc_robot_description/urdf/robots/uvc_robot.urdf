@@ -489,4 +489,85 @@
       <joint_name>right_wheel_joint</joint_name>
     </plugin>
   </gazebo>
+  <!-- LEFT STEREO CAMERA -->
+  <link name="left_camera_link"/>
+
+  <joint name="left_camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_camera_link"/>
+    <origin xyz="0.124 0.075 1.92815" rpy="0 0 0"/>
+  </joint>
+
+  <link name="left_camera_optical_frame"/>
+
+  <joint name="left_camera_optical_joint" type="fixed">
+    <parent link="left_camera_link"/>
+    <child link="left_camera_optical_frame"/>
+    <origin xyz="0 0 0"
+            rpy="-1.57079632679 0 -1.57079632679"/>
+  </joint>
+
+  <gazebo reference="left_camera_link">
+    <sensor name="left_camera" type="camera">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <update_rate>15</update_rate>
+      <topic>/stereo/left/image</topic>
+      <gz_frame_id>left_camera_optical_frame</gz_frame_id>
+      <camera name="left_camera_sensor">
+        <horizontal_fov>1.22173</horizontal_fov>
+        <image>
+          <width>1920</width>
+          <height>1080</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.05</near>
+          <far>20</far>
+        </clip>
+        <camera_info_topic>/stereo/left/camera_info</camera_info_topic>
+      </camera>
+    </sensor>
+  </gazebo>
+
+  <!-- RIGHT STEREO CAMERA -->
+  <link name="right_camera_link"/>
+
+  <joint name="right_camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_camera_link"/>
+    <origin xyz="0.124 -0.075 1.92815" rpy="0 0 0"/>
+  </joint>
+
+  <link name="right_camera_optical_frame"/>
+
+  <joint name="right_camera_optical_joint" type="fixed">
+    <parent link="right_camera_link"/>
+    <child link="right_camera_optical_frame"/>
+    <origin xyz="0 0 0"
+            rpy="-1.57079632679 0 -1.57079632679"/>
+  </joint>
+
+  <gazebo reference="right_camera_link">
+    <sensor name="right_camera" type="camera">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <update_rate>15</update_rate>
+      <topic>/stereo/right/image</topic>
+      <gz_frame_id>right_camera_optical_frame</gz_frame_id>
+      <camera name="right_camera_sensor">
+        <horizontal_fov>1.22173</horizontal_fov>
+        <image>
+          <width>1920</width>
+          <height>1080</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.05</near>
+          <far>20</far>
+        </clip>
+        <camera_info_topic>/stereo/right/camera_info</camera_info_topic>
+      </camera>
+    </sensor>
+  </gazebo>
 </robot>
